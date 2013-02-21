@@ -1,5 +1,7 @@
 KwJesusdemari::Application.routes.draw do
 
+  get "home/index"
+
   resources :user_sessions
   resources :users
   resources :password_resets
