@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<%= stylesheet_link_tag "default"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jcycle.js" %>
+<script>
+jQuery(document).ready(function(){ 
+	 $('#slide-news').cycle({
+			fx:     'scrollHorz', 
+    		speed:  'slow', 
+    		timeout: 0, 
+    		next:   '#news-next', 
+    		prev:   '#news-prev'
+	});
+	
+	$('#novidades').css('background-position','bottom');
+});
+</script>
+</head>
+<body>
+<div id='container'>
+	<div id='top-bar'>
+		<div id='top-bar-content'>
+			<div id='top-bar-left'>
+				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
+			</div>
+			<div id='top-bar-right'>
+				<form>
+					<label>Usuário</label><input type='text' />
+					<label>Senha</label><input type='text' />
+					<input type='image' src='../images/btn_login.png' class='input-img' />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id='content'>
+		<div id='header'>
+			<div id='header-logo'>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-chat'>
+				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-menu'>
+				<ul>
+					<a href='javascript:void(0)'><li id='grupo'><li></a>
+					<a href='javascript:void(0)'><li id='servicos'><li></a>
+					<a href='javascript:void(0)'><li id='produtos'><li></a>
+					<a href='javascript:void(0)'><li id='novidades'><li></a>
+					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
+					<a href='javascript:void(0)'><li id='contato'><li></a>
+				</ul>
+			</div>
+		</div>
+		<div id='article'>
+			<div id='article-content'>
+				<div id='top-news'>
+					<h1>NOVIDADES</h1>
+				</div>
+				<div class='clear'></div>
+				<div id='news-article'>
+					<h1>Obra no Centro Histórico da Cidade de Atibaia</h1>
+					<p>O centro histórico da cidade de Atibaia está passando por um processo de revitalização e o Grupo Jesus de Mari se orgulha de estar presente neste momento tão importante para a cidade.</p>
+					<ul>
+						<li>Nova pavimentação das calçadas.</li>
+						<li>Canalização de escoamento da água da chuva, tubulação e bloquete Jesus de Mari.</li>
+					</ul>
+				</div>
+				<div id='slide-news'>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+				</div>
+				<div id='news-next'>
+				
+				</div>
+				<div id='news-prev'>
+				
+				</div>
+				<div id='article-news-box'>
+					<div id='article-news-box-img'>
+						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
+					</div>
+					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+					<div id='article-news-box-info'>
+						<h2>RESPONSABILIDADE AMBIENTAL</h2>
+						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
+							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
+					</div>
+				</div>
+				<div id='article-news-box'>
+					<div id='article-news-box-img'>
+						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
+					</div>
+					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+					<div id='article-news-box-info'>
+						<h2>RESPONSABILIDADE AMBIENTAL</h2>
+						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
+							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
+					</div>
+				</div>
+			</div>
+			<div class='clear'></div>
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				<ul>
+					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
+				</ul>
+			</div>
+			<div id='footer-right'>
+				<p>Jesus de Mari  © 2013</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

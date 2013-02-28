@@ -1,0 +1,130 @@
+#top-news{
+	display:block !important;
+	width:950px;
+	height:250px;
+	margin-top:-10px;
+	background-image:url('../images/top-news.jpg');
+	background-position:top right;
+	background-repeat:no-repeat;
+	text-align:center;
+	}
+
+	#top-news h1{
+		float:right;
+		font-family: 'Oxygen', sans-serif;
+		font-size:20px;
+		color:#2b4158;
+		font-weight:bold;
+		margin-top:100px;
+		margin-right:410px;
+		}
+
+#news-article{
+	width:910px;
+	padding:20px 20px;
+	margin-top:10px;
+	background-image:url('../images/bg_article.png');
+	}
+
+	#news-article h1{
+		font-family: 'Oxygen', sans-serif;
+		font-size:20px;
+		color:#2d4761;
+		font-weight:bold;
+		margin-bottom:10px;
+		}
+	
+	#news-article p{
+		font-family: 'Oxygen', sans-serif;
+		font-size:14px;
+		color:#2d4761;
+		margin-bottom:10px;
+		}
+	
+	#news-article ul{
+		margin-left:40px;
+		}
+		
+		#news-article ul li{
+		font-family: 'Oxygen', sans-serif;
+		font-size:14px;
+		color:#2d4761;
+		margin-bottom:5px;
+		list-style:square;
+		}
+
+#slide-news{
+	position:relative;
+	width:950px;
+	height:575px;
+	z-index:1000;
+	margin-top:10px;
+	}
+
+#news-next{
+	position:relative;
+	width:98px;
+	height:575px;
+	background-image:url('../images/btn_slide_group.png');
+	background-position:top right;
+	background-repeat:no-repeat;
+	z-index:2000;
+	float:right;
+	margin-top:-575px;
+	cursor:pointer;
+	}
+
+#news-prev{
+	position:relative;
+	width:98px;
+	height:575px;
+	background-image:url('../images/btn_slide_group.png');
+	background-position:top left;
+	background-repeat:no-repeat;
+	z-index:2000;
+	margin-top:-575px;
+	cursor:pointer;
+	}
+
+					#article-news-box{
+						width:950px;
+						height:151px;
+						background-color:#a7bdcb;
+						margin-top:5px;
+						}
+						
+						#article-news-box-img{
+							padding-top:9px;
+							padding-left:10px;
+							float:left;
+							}
+						
+						#article-news-box-info{
+							width:615px;
+							padding-top:24px;
+							padding-right:34px;
+							float:right;
+							}
+							
+							#article-news-box-info h2{
+								font-family: 'Oxygen', sans-serif;
+								font-weight:bold;
+								font-size:15px;
+								color:#435b66;
+								margin-bottom:15px;
+								}
+								
+							#article-news-box-info p{
+								font-family: 'Oxygen', sans-serif;
+								font-size:13px;
+								color:#435b66;
+								}
+							
+							#article-news-box-info a{
+								float:right;
+								margin-top:15px;
+								}
+						
+						#article-news-box img{
+							float:right;
+							}

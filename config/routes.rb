@@ -1,5 +1,7 @@
 KwJesusdemari::Application.routes.draw do
 
+  get "news/index"
+
   get "group/index"
 
   get "home/index"
