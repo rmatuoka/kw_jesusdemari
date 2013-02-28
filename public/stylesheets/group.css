@@ -1,6 +1,22 @@
 #top-group{
+	display:block !important;
+	width:950px;
+	height:250px;
 	margin-top:-10px;
+	background-image:url('../images/top-group.jpg');
+	background-position:top right;
+	background-repeat:no-repeat;
 	}
+
+	#top-group h1{
+		float:right;
+		font-family: 'Oxygen', sans-serif;
+		font-size:20px;
+		color:#2b4158;
+		font-weight:bold;
+		margin-right:22px;
+		margin-top:205px;
+		}
 
 #group-article{
 	width:910px;
@@ -49,6 +65,7 @@
 	z-index:2000;
 	float:right;
 	margin-top:-575px;
+	cursor:pointer;
 	}
 
 #group-prev{
@@ -60,4 +77,5 @@
 	background-repeat:no-repeat;
 	z-index:2000;
 	margin-top:-575px;
+	cursor:pointer;
 	}

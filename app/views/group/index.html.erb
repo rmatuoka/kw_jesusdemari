@@ -15,6 +15,8 @@ jQuery(document).ready(function(){
     		next:   '#group-next', 
     		prev:   '#group-prev'
 	});
+	
+	$('#grupo').css('background-position','bottom');
 });
 </script>
 </head>
@@ -56,8 +58,9 @@ jQuery(document).ready(function(){
 		<div id='article'>
 			<div id='article-content'>
 				<div id='top-group'>
-					<%= image_tag('top-group.jpg', :height=>'250', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<h1>A Empresa</h1>
 				</div>
+				<div class='clear'></div>
 				<div id='group-article'>
 					<h1>Histórico</h1>
 					<p>Jesus de Mari Indústria de Pré Moldados, fundada a mais de 30 anos, localizada no município de Atibaia-SP, é uma empresa fabricante de produtos e prestadora de serviços que consagrou sua marca e consolidou seu nome no ramo de Pré moldados.<br><br>
