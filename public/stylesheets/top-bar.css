@@ -1,0 +1,47 @@
+		#top-bar-content{
+			position:relative;
+			width:950px;
+			left:50%;
+			margin-left:-475px;
+			}
+		
+			#top-bar-left{
+				float:left;
+				margin-top:14px;
+				}
+				
+				#top-bar-left a{
+					font-family: 'Oxygen', sans-serif;
+					font-size:12px;
+					color:#b6e1f2;
+					}
+				
+			#top-bar-right{
+				float:right;
+				}
+				
+				#top-bar-right label{
+					font-family: 'Oxygen', sans-serif;
+					font-size:12px;
+					color:#b6e1f2;
+					margin-right:10px;
+					}
+				
+				#top-bar-right input{
+					width:165px;
+					height:30px;
+					padding:5px;
+					font-family: 'Oxygen', sans-serif;
+					font-size:12px;
+					color:#2d4761;
+					border:none;
+					background-color:#b6e1f2;
+					margin-right:10px;
+					}
+				
+					.input-img{
+						width:16px !important;
+						background-color:transparent !important;
+						float:right;
+						margin-top:-40px;
+						}

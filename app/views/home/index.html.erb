@@ -3,27 +3,129 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
+<%= stylesheet_link_tag "default"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jcycle.js" %>
+<script>
+jQuery(document).ready(function(){ 
+	 $('#slide-home')
+		 .before('<div id="nav">')
+		 .cycle({
+			fx:     'scrollRight', 
+			speed:  'fast', 
+			timeout: 0, 
+			pager:  '#nav'
+	});
+});
+</script>
 </head>
-
 <body>
-<div id=''>
-	<div id=''>
-	
+<div id='container'>
+	<div id='top-bar'>
+		<div id='top-bar-content'>
+			<div id='top-bar-left'>
+				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
+			</div>
+			<div id='top-bar-right'>
+				<form>
+					<label>Usuário</label><input type='text' />
+					<label>Senha</label><input type='text' />
+					<input type='image' src='../images/btn_login.png' class='input-img' />
+				</form>
+			</div>
+		</div>
 	</div>
-	<div id=''>
-		<div id=''>
-		
-		</div>
-		<div id=''>
-			<div id=''>
-		
+	<div id='content'>
+		<div id='header'>
+			<div id='header-logo'>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
 			</div>
-			<div id=''>
-		
+			<div id='header-chat'>
+				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-menu'>
+				<ul>
+					<a href='javascript:void(0)'><li id='grupo'><li></a>
+					<a href='javascript:void(0)'><li id='servicos'><li></a>
+					<a href='javascript:void(0)'><li id='produtos'><li></a>
+					<a href='javascript:void(0)'><li id='novidades'><li></a>
+					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
+					<a href='javascript:void(0)'><li id='contato'><li></a>
+				</ul>
 			</div>
 		</div>
-		<div id=''>
-		
+		<div id='article'>
+			<div id='slide-home'>
+				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='article-content'>
+				<div id='article-left'>
+					<div id='article-left-title'>
+						<h1>Lorem Ipsum dolor site amet</h1>
+					</div>
+					<div id='article-left-box'>
+						<div id='article-left-box-img'>
+							<%= image_tag('sample1.jpg', :height=>'100', :width=>'150', :alt=>'Castelatto', :title=>'Castelatto') %>
+						</div>
+						<div id='article-left-box-info'>
+							<h2>Aduelas Quadradas de Concreto</h2>
+							<p>As Aduelas Quadradas de Concreto são projetadas para atender as mais variadas necessidades da sua obra , com encaixe perfeitos nossas Aduelas Quadradas de Concreto são melhores do mercado</p>
+							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+						</div>
+					</div>
+					<div id='article-left-box'>
+						<div id='article-left-box-img'>
+							<%= image_tag('sample1.jpg', :height=>'100', :width=>'150', :alt=>'Castelatto', :title=>'Castelatto') %>
+						</div>
+						<div id='article-left-box-info'>
+							<h2>Aduelas Quadradas de Concreto</h2>
+							<p>As Aduelas Quadradas de Concreto são projetadas para atender as mais variadas necessidades da sua obra , com encaixe perfeitos nossas Aduelas Quadradas de Concreto são melhores do mercado</p>
+							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+						</div>
+					</div>
+					<div id='article-left-box'>
+						<div id='article-left-box-img'>
+							<%= image_tag('sample1.jpg', :height=>'100', :width=>'150', :alt=>'Castelatto', :title=>'Castelatto') %>
+						</div>
+						<div id='article-left-box-info'>
+							<h2>Aduelas Quadradas de Concreto</h2>
+							<p>As Aduelas Quadradas de Concreto são projetadas para atender as mais variadas necessidades da sua obra , com encaixe perfeitos nossas Aduelas Quadradas de Concreto são melhores do mercado</p>
+							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+						</div>
+					</div>
+				</div>
+				<div id='article-right'>
+					<div id='article-right-title'>
+						<h1>Parceiro</h1>
+					</div>
+					<div id='article-right-box'>
+						<%= link_to image_tag('sample2.jpg', :height=>'295', :width=>'378', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+					</div>
+					<div id='article-right-box'>
+						<%= link_to image_tag('sample3.jpg', :height=>'160', :width=>'378', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+					</div>
+				</div>
+				<div class='clear'></div>
+			</div>
+			<div class='clear'></div>
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				<ul>
+					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
+				</ul>
+			</div>
+			<div id='footer-right'>
+				<p>Jesus de Mari  © 2013</p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<%= stylesheet_link_tag "default"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jcycle.js" %>
+<script>
+jQuery(document).ready(function(){ 
+	 $('#slide-group').cycle({
+			fx:     'scrollHorz', 
+    		speed:  'slow', 
+    		timeout: 0, 
+    		next:   '#group-next', 
+    		prev:   '#group-prev'
+	});
+});
+</script>
+</head>
+<body>
+<div id='container'>
+	<div id='top-bar'>
+		<div id='top-bar-content'>
+			<div id='top-bar-left'>
+				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
+			</div>
+			<div id='top-bar-right'>
+				<form>
+					<label>Usuário</label><input type='text' />
+					<label>Senha</label><input type='text' />
+					<input type='image' src='../images/btn_login.png' class='input-img' />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id='content'>
+		<div id='header'>
+			<div id='header-logo'>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-chat'>
+				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-menu'>
+				<ul>
+					<a href='javascript:void(0)'><li id='grupo'><li></a>
+					<a href='javascript:void(0)'><li id='servicos'><li></a>
+					<a href='javascript:void(0)'><li id='produtos'><li></a>
+					<a href='javascript:void(0)'><li id='novidades'><li></a>
+					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
+					<a href='javascript:void(0)'><li id='contato'><li></a>
+				</ul>
+			</div>
+		</div>
+		<div id='article'>
+			<div id='article-content'>
+				<div id='top-group'>
+					<%= image_tag('top-group.jpg', :height=>'250', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+				</div>
+				<div id='group-article'>
+					<h1>Histórico</h1>
+					<p>Jesus de Mari Indústria de Pré Moldados, fundada a mais de 30 anos, localizada no município de Atibaia-SP, é uma empresa fabricante de produtos e prestadora de serviços que consagrou sua marca e consolidou seu nome no ramo de Pré moldados.<br><br>
+	Com o objetivo de atender todas as necessidades do ramo de Pré moldados o Grupo Jesus De Mari se aprimora e aumenta a sua capacidade de produção dia após dia, para que toda vez que necessitarem de nossos produtos estaremos prontos para servi-los com todo profissionalismo e respeito que sua empresa merece.</p>
+					<h1>Compromisso</h1>
+					<p>	O Grupo Jesus de Mari possui um firme compromisso com a qualidade dos produtos que levam sua marca e para isso investe constantemente em tecnologia, aprimoramento de processos e preparação da equipe.<br><br>	
+	Além de contar com equipamentos modernos para a fabricação dos produtos, o Grupo Jesus de Mari possui laboratório próprio para realizar ensaios de qualidade em todos os produtos oferecidos ao mercado, garantindo e reafirmando, assim, a confiabilidade da marca.</p>
+					<h1>Valores</h1>
+					<h2>Qualidade</h2>
+					<p>Qualidade, alto padrão e confiabilidade é com a Jesus de Mari, pois tem mais de 30 anos de experiência e profissionalismo.
+A nossa linha de produção é uma família que remonta a mais de 30 anos de história, composta por mais de 400 funcionários que trabalham com total segurança em uma área de 91.000m² de excelente infra estrutura. Isso faz da nossa linha de produção eficiente e rápida.
+Contamos com um completo estoque e com uma frota preparada e apta a agilizar o processo de entrega, em qualquer quantidade em todo território em nível nacional.</p>
+				</div>
+				<div id='slide-group'>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+				</div>
+				<div id='group-next'>
+				
+				</div>
+				<div id='group-prev'>
+				
+				</div>
+			</div>
+			<div class='clear'></div>
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				<ul>
+					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
+				</ul>
+			</div>
+			<div id='footer-right'>
+				<p>Jesus de Mari  © 2013</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

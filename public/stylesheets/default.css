@@ -1,5 +1,56 @@
-@import url (reset.css);
-@import url (fonts.css);
-@import url (barra.css);
-@import url (menu.css);
-@import url (footer.css);
+@import url(reset.css); /* IMPORTAÇÃO DO RESET*/
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(top-bar.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(home.css);
+@import url(group.css);
+
+body{
+	background-image:url('../images/bg_site.jpg');
+	background-position:0px 40px;
+	background-repeat:no-repeat;
+	}
+
+#container{
+
+	}
+
+	#top-bar{
+		position:absolute;
+		width:100%;
+		height:40px;
+		background-color:#2d4761;
+		top:0;
+		}
+	
+	#content{
+		position:absolute;
+		width:950px;
+		top:40px;
+		left:50%;
+		margin-left:-475px;
+		}
+		
+		#header{
+			position:relative;
+			width:950px;
+			height:300px;
+			}
+		
+		#article{
+			position:relative;
+			width:950px;
+			top:10px;
+
+			}
+		
+		#footer{
+			position:relative;
+			width:950px;
+			height:50px;
+			top:20px;
+			background-color:#45718c;
+			}
+			
+			

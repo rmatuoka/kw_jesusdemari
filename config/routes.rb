@@ -1,5 +1,7 @@
 KwJesusdemari::Application.routes.draw do
 
+  get "group/index"
+
   get "home/index"
 
   resources :user_sessions

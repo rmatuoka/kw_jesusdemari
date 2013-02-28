@@ -1,0 +1,28 @@
+			#footer-left{
+				float:left;
+				margin-left:20px;
+				margin-top:18px;
+				}
+				
+				#footer-left ul li{
+					float:left;
+					margin-right:30px;
+					}
+					
+					#footer-left ul li a{
+						font-family: 'Oxygen', sans-serif;
+						font-size:12px;
+						color:#b6e1f2;
+						}
+						
+			#footer-right{
+				float:right;
+				margin-right:20px;
+				margin-top:18px;
+				}
+				
+				#footer-right p{
+					font-family: 'Oxygen', sans-serif;
+					font-size:12px;
+					color:#b6e1f2;
+					}
