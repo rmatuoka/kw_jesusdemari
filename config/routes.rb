@@ -1,6 +1,12 @@
 KwJesusdemari::Application.routes.draw do
 
+  get "products/index"
+
+  get "products/show"
+
   get "news/index"
+
+  get "news/show"
 
   get "group/index"
 
