@@ -6,6 +6,7 @@
 @import url(home.css);
 @import url(group.css);
 @import url(news.css);
+@import url(products-index.css);
 
 body{
 	background-image:url('../images/bg_site.jpg');

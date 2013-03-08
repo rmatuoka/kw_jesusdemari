@@ -1,0 +1,296 @@
+#top-products-index{
+	display:block !important;
+	width:950px;
+	height:250px;
+	margin-top:-10px;
+	background-image:url('../images/top-products-index.jpg');
+	background-position:top right;
+	background-repeat:no-repeat;
+	text-align:center;
+	}
+
+	#top-products-index h1{
+		float:left;
+		font-family: 'Oxygen', sans-serif;
+		font-size:20px;
+		color:#2b4158;
+		font-weight:bold;
+		margin-top:200px;
+		margin-left:2px;
+		background-image:url('../images/bg_article.png');
+		width:184px;
+		height:30px;
+		padding-top:10px;
+		}
+
+#products-index-article{
+	width:910px;
+	padding:20px 20px;
+	margin-top:30px;
+	background-image:url('../images/bg_article.png');
+	}
+
+	#products-index-article h1{
+		font-family: 'Oxygen', sans-serif;
+		font-size:20px;
+		color:#2d4761;
+		font-weight:bold;
+		margin-bottom:10px;
+		}
+	
+	#products-index-article p{
+		font-family: 'Oxygen', sans-serif;
+		font-size:14px;
+		color:#2d4761;
+		margin-bottom:10px;
+		}
+	
+	#products-index-article ul{
+		margin-left:40px;
+		}
+		
+		#products-index-article ul li{
+		font-family: 'Oxygen', sans-serif;
+		font-size:14px;
+		color:#2d4761;
+		margin-bottom:5px;
+		list-style:square;
+		}
+
+#slide-products-index{
+	position:relative;
+	width:950px;
+	height:575px;
+	z-index:1000;
+	margin-top:10px;
+	}
+
+#products-index-next{
+	position:relative;
+	width:98px;
+	height:575px;
+	background-image:url('../images/btn_slide_group.png');
+	background-position:top right;
+	background-repeat:no-repeat;
+	z-index:2000;
+	float:right;
+	margin-top:-575px;
+	cursor:pointer;
+	}
+
+#products-index-prev{
+	position:relative;
+	width:98px;
+	height:575px;
+	background-image:url('../images/btn_slide_group.png');
+	background-position:top left;
+	background-repeat:no-repeat;
+	z-index:2000;
+	margin-top:-575px;
+	cursor:pointer;
+	}
+	
+	#btn_voltar{
+		float:right;
+		margin-top:-30px;
+		margin-right:-20px;
+		}
+
+					#article-products-index-box{
+						width:950px;
+						height:151px;
+						background-color:#f4f7f8;
+						margin-top:5px;
+						}
+						
+						#article-products-index-box-img{
+							padding-top:9px;
+							padding-left:10px;
+							float:left;
+							}
+						
+						#article-products-index-box-info{
+							width:615px;
+							padding-top:24px;
+							padding-right:34px;
+							float:right;
+							}
+							
+							#article-products-index-box-info h2{
+								font-family: 'Oxygen', sans-serif;
+								font-weight:bold;
+								font-size:15px;
+								color:#435b66;
+								margin-bottom:15px;
+								}
+								
+							#article-products-index-box-info p{
+								font-family: 'Oxygen', sans-serif;
+								font-size:13px;
+								color:#435b66;
+								}
+							
+							#article-products-index-box-info a{
+								float:right;
+								margin-top:15px;
+								}
+						
+						#article-products-index-box img{
+							float:right;
+							}
+
+#box-products-index-1{
+	width:950px;
+	height:405px;
+	margin-top:20px;
+	margin-bottom:40px;
+	background-image:url('../images/bg_prod-1.png');
+	}
+
+.logo{
+	margin-top:20px;
+	}
+
+#box-products-index-1 h1{
+	margin-left:310px;
+	font-family: 'Oxygen', sans-serif;
+	font-size:20px;
+	color:#ededed;
+	margin-top:-125px;
+	}
+
+.text-box-prod{
+	margin-left:310px;
+	font-family: 'Oxygen', sans-serif;
+	font-size:14px;
+	color:#2d4761;
+	margin-top:30px;
+	}
+
+#box-mais-prod-1{
+	position:relative;
+	width:300px;
+	height:200px;
+	margin-left:11px;
+	margin-top:50px;
+	font-family: 'Oxygen', sans-serif;
+	font-size:14px;
+	color:#2d4761;
+	line-height:18px;
+	float:left;
+	}
+
+#box-mais-prod-1 img{
+	float:left;
+    margin:0 20px 10px 0;	
+	}
+
+#box-mais-prod-1 b{
+	font-weight:bold;	
+	}
+
+.btn-mais-prod-1{
+	position:absolute;
+	display:block;
+	width:300px;
+	height:50px;
+	background-image:url('../images/btn-leia-mais-prod-1.jpg');
+	background-position:center bottom;
+	bottom:5px;
+	}
+
+.btn-mais-prod-1:hover{
+	display:block;
+	width:300px;
+	height:50px;
+	background-image:url('../images/btn-leia-mais-prod-1.jpg');
+	background-position:center top;	
+	}
+
+.btn-mais-prod-2{
+	position:absolute;
+	display:block;
+	width:300px;
+	height:50px;
+	background-image:url('../images/btn-leia-mais-prod-2.jpg');
+	background-position:center bottom;
+	bottom:5px;
+	}
+
+.btn-mais-prod-2:hover{
+	display:block;
+	width:300px;
+	height:50px;
+	background-image:url('../images/btn-leia-mais-prod-2.jpg');
+	background-position:center top;	
+	}
+
+.btn-mais-prod-3{
+	position:absolute;
+	display:block;
+	width:300px;
+	height:50px;
+	background-image:url('../images/btn-leia-mais-prod-3.jpg');
+	background-position:center bottom;
+	bottom:5px;
+	}
+
+.btn-mais-prod-3:hover{
+	display:block;
+	width:300px;
+	height:50px;
+	background-image:url('../images/btn-leia-mais-prod-3.jpg');
+	background-position:center top;	
+	}
+
+
+#box-products-index-2{
+	width:950px;
+	height:405px;
+	margin-bottom:40px;
+	background-image:url('../images/bg_prod-2.png');
+	}
+
+
+
+#box-products-index-2 h1{
+	margin-left:310px;
+	font-family: 'Oxygen', sans-serif;
+	font-size:20px;
+	color:#ededed;
+	margin-top:-125px;
+	}
+
+#box-products-index-3{
+	width:950px;
+	height:405px;
+	margin-bottom:40px;
+	background-image:url('../images/bg_prod-3.png');
+	}
+
+
+
+#box-products-index-3 h1{
+	margin-left:310px;
+	font-family: 'Oxygen', sans-serif;
+	font-size:20px;
+	color:#ededed;
+	margin-top:-125px;
+	}
+
+#box-products-index-4{
+	width:950px;
+	height:405px;
+	margin-bottom:40px;
+	background-image:url('../images/bg_prod-1.png');
+	}
+
+
+
+#box-products-index-4 h1{
+	margin-left:310px;
+	font-family: 'Oxygen', sans-serif;
+	font-size:20px;
+	color:#ededed;
+	margin-top:-125px;
+	}
