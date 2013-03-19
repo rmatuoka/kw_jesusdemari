@@ -32,7 +32,7 @@ jQuery(document).ready(function()
 </script>
 </head>
 <body>
-<%#=render :file => "layouts/_header.html.erb"%>
+<%=render :file => "layouts/_header.html.erb"%>
 
 <div id="Content">
 	<div id="SideBar" class="three columns">
@@ -43,6 +43,8 @@ jQuery(document).ready(function()
 		<ul class="sub-menu">
 			<li><%#= link_to "Gerenciar Usuários",admin_users_path%></li>
 			<li><%#= link_to "Gerenciar Uploads",admin_galery_images_path%></li>
+			<li><%= link_to "Gerenciar Notícias",admin_notices_path%></li>
+			<li><%= link_to "Gerenciar Seções",admin_sections_path%></li>
 		</ul>
 		<%end%>
 	</div>
@@ -56,7 +58,7 @@ jQuery(document).ready(function()
 </div>
 
 <div id="Footer" class="twelve columns">
-	<%#=render :file => "layouts/_footer.html.erb"%>
+	<%=render :file => "layouts/_footer.html.erb"%>
 </div>
 <!-- Included JS Files (Compressed) -->
 <script src="javascripts/jquery.js"></script>

@@ -1,0 +1,8 @@
+<% title "Editar Notícia" %>
+<h1>Notícias - Editar <%= @notice.summary %> </h1>
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Visualizar", [:admin, @notice], :class => "secondary small button" %> |
+  <%= link_to "Ver Todas", admin_notices_path, :class => "secondary small button" %>
+</p>

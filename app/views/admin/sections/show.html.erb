@@ -1,0 +1,13 @@
+<% title "Admin/Section" %>
+<h1>Seção - <%= @section.title %></h1>
+
+<p>
+  <strong>título:</strong>
+  <%= @section.title %>
+</p>
+
+<p>
+  <%= link_to "Editar", edit_admin_section_path(@section), :class => "secondary small button" %> |
+  <%= link_to "Deletar", [:admin, @section], :confirm => 'Tem Certeza?', :method => :delete, :class => "secondary small button" %> |
+  <%= link_to "Ver Todas", admin_sections_path, :class => "secondary small button" %>
+</p>

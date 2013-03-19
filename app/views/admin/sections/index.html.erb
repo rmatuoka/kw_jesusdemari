@@ -1,0 +1,18 @@
+<% title "Admin/Sections" %>
+
+<table>
+  <tr>
+    <h1>Título</h1>
+  </tr>
+  <% for section in @sections %>
+    <tr>
+      <td><%= section.title %></td>
+      <td><%= link_to "Ver", [:admin, section], :class => "secondary small button" %></td>
+      <td><%= link_to "Editar", edit_admin_section_path(section), :class => "secondary small button" %></td>
+      <td><%= link_to "Deletar", [:admin, section], :confirm => 'Tem certeza?', :method => :delete, :class => "secondary small button" %></td>
+      <td><%= link_to "Banners", admin_section_banners_path(section), :class => "secondary small button"%></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "+ Seção", new_admin_section_path, :class => "button" %></p>

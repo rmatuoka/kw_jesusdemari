@@ -1,0 +1,24 @@
+<%= form_for [:admin, @notice] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title, "Titulo" %>
+    <%= f.text_field :title, :placeholder => "Título", :class => "twelve columns" %>
+  </p>
+  <p>
+    <%= f.label :summary, "Resumo" %>
+    <%= f.text_field :summary, :placeholder => "Resumo", :class => "twelve columns"  %>
+  </p>
+  <p>
+    <%= f.label :body, "Conteúdo" %>
+    <%= f.text_area :body, :placeholder => "Conteúdo", :class => "twelve columns"  %>
+  </p>
+  <p>
+    <%= f.label :published, "Publicada" %>
+    <%= f.check_box :published %>
+  </p>
+  <p>
+    <%= f.label :active, "Ativa" %>
+    <%= f.check_box :active %>
+  </p>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
+<% end %>

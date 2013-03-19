@@ -1,0 +1,26 @@
+<% title "Admin/Notices" %>
+<h1>Notícias</h1>
+
+<table class="twelve columns">
+  <tr>
+    <th>Título</th>
+    <th>Resumo</th>
+    <th>Conteúdo</th>
+    <th>Publicada</th>
+    <th>Ativa</th>
+  </tr>
+  <% for notice in @notices %>
+    <tr>
+      <td><%= notice.title %></td>
+      <td><%= notice.summary %></td>
+      <td><%= notice.body %></td>
+      <td><%= notice.published %></td>
+      <td><%= notice.active %></td>
+      <td><%= link_to "Visualizar", [:admin, notice], :class => "secondary small button" %>
+      <%= link_to "Editar", edit_admin_notice_path(notice), :class => "secondary small button" %>
+      <%= link_to "Deletar", [:admin, notice], :confirm => 'Are you sure?', :method => :delete, :class => "secondary small button" %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "+ Notícia", new_admin_notice_path, :class => "button" %></p>

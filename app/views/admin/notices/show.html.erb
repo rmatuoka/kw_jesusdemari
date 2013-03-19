@@ -1,0 +1,25 @@
+<% title "Admin/Notice" %>
+<h1>Notícias - <%= @notice.summary %> </h1>
+
+<p>
+  <strong>Resumo:</strong>
+  <%= @notice.summary %>
+</p>
+<p>
+  <strong>Conteúdo:</strong>
+  <%= @notice.body %>
+</p>
+<p>
+  <strong>Publicada:</strong>
+  <%= @notice.published %>
+</p>
+<p>
+  <strong>Ativa:</strong>
+  <%= @notice.active %>
+</p>
+
+<p>
+  <%= link_to "Editar", edit_admin_notice_path(@notice), :class => "secondary small button" %> 
+  <%= link_to "Deletar", [:admin, @notice], :confirm => 'Are you sure?', :method => :delete, :class => "secondary small button" %> 
+  <%= link_to "Ver todas", admin_notices_path, :class => "secondary small button" %>
+</p>

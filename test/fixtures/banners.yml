@@ -1,0 +1,13 @@
+one:
+  title: MyString
+  link: MyString
+  section_id: 1
+  published: false
+  active: false
+
+two:
+  title: MyString
+  link: MyString
+  section_id: 1
+  published: false
+  active: false

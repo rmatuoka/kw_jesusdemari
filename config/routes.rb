@@ -1,5 +1,6 @@
 KwJesusdemari::Application.routes.draw do
 
+
   get "products/index"
 
   get "products/show"
@@ -18,7 +19,11 @@ KwJesusdemari::Application.routes.draw do
   resources :atualizar
   #Inicio do namespace Admin
   namespace(:admin){
+  resources :notices
     resources :static_contents
+    resources(:sections){
+		resources :banners
+    }
     resources :users do
       collection do
         get 'search'
