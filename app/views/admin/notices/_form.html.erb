@@ -1,4 +1,4 @@
-<%= form_for [:admin, @notice] do |f| %>
+<%= form_for ([:admin, @notice], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title, "Titulo" %>
@@ -11,6 +11,18 @@
   <p>
     <%= f.label :body, "Conteúdo" %>
     <%= f.text_area :body, :placeholder => "Conteúdo", :class => "twelve columns"  %>
+  </p>
+  <%if @notice.image.file?%>
+
+  <p> 
+
+  <%= image_tag(@notice.image.url(:thumb)) %>
+
+  </p>
+<% end %>
+  <p>
+    <%= f.label :image, "Imagem" %> 
+    <%= f.file_field :image %>
   </p>
   <p>
     <%= f.label :published, "Publicada" %>

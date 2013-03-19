@@ -1,8 +1,8 @@
-<% title "Edit Admin/Banner" %>
+<% title "Editar Banner" %>
 
 <%= render 'form' %>
 
 <p>
-  <%= link_to "Show", admin_section_banner_path(@section,@banner) %> |
-  <%= link_to "View All", admin_section_banners_path(@section) %>
+  <%= link_to "Show", admin_section_banner_path(@section,@banner), :class => "secondary small button" %> |
+  <%= link_to "View All", admin_section_banners_path(@section), :class => "secondary small button" %>
 </p>

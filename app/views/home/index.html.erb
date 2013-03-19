@@ -56,46 +56,41 @@ jQuery(document).ready(function(){
 		</div>
 		<div id='article'>
 			<div id='slide-home'>
-				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-				<%= link_to image_tag('sample4.png', :height=>'410', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+        <% if @highlights.count > 0 %>
+        
+        <% @highlights.each do |featured| %>
+        
+        <% featured.banners.each do |banner| %>
+
+        <%= link_to image_tag(banner.image.url("rotative")),banner.link,:target => banner.target%>
+        
+        <% end %>
+        
+        <% end %>
+        <% end %>
 			</div>
 			<div id='article-content'>
 				<div id='article-left'>
 					<div id='article-left-title'>
 						<h1>Lorem Ipsum dolor site amet</h1>
 					</div>
+          
+          <%@news.each do |n|%>
 					<div id='article-left-box'>
 						<div id='article-left-box-img'>
-							<%= image_tag('sample1.jpg', :height=>'100', :width=>'150', :alt=>'Castelatto', :title=>'Castelatto') %>
+							<%= image_tag(n.image.url(:home), :alt=>n.title, :title=>n.title) %>
 						</div>
 						<div id='article-left-box-info'>
-							<h2>Aduelas Quadradas de Concreto</h2>
-							<p>As Aduelas Quadradas de Concreto são projetadas para atender as mais variadas necessidades da sua obra , com encaixe perfeitos nossas Aduelas Quadradas de Concreto são melhores do mercado</p>
+							<h2><%=n.title%></h2>
+							<p><%=n.summary%></p>
 							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
 						</div>
 					</div>
-					<div id='article-left-box'>
-						<div id='article-left-box-img'>
-							<%= image_tag('sample1.jpg', :height=>'100', :width=>'150', :alt=>'Castelatto', :title=>'Castelatto') %>
-						</div>
-						<div id='article-left-box-info'>
-							<h2>Aduelas Quadradas de Concreto</h2>
-							<p>As Aduelas Quadradas de Concreto são projetadas para atender as mais variadas necessidades da sua obra , com encaixe perfeitos nossas Aduelas Quadradas de Concreto são melhores do mercado</p>
-							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-						</div>
-					</div>
-					<div id='article-left-box'>
-						<div id='article-left-box-img'>
-							<%= image_tag('sample1.jpg', :height=>'100', :width=>'150', :alt=>'Castelatto', :title=>'Castelatto') %>
-						</div>
-						<div id='article-left-box-info'>
-							<h2>Aduelas Quadradas de Concreto</h2>
-							<p>As Aduelas Quadradas de Concreto são projetadas para atender as mais variadas necessidades da sua obra , com encaixe perfeitos nossas Aduelas Quadradas de Concreto são melhores do mercado</p>
-							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-						</div>
-					</div>
+          <%end%>
+          
+          
+					
+					
 				</div>
 				<div id='article-right'>
 					<div id='article-right-title'>

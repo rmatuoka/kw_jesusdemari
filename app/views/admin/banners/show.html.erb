@@ -5,6 +5,10 @@
   <%= @banner.title %>
 </p>
 <p>
+  <strong>Imagem:</strong>
+  <%= image_tag(@banner.image.url(:thumb)) %>
+</p>
+<p>
   <strong>Link:</strong>
   <%= @banner.link %>
 </p>
@@ -22,7 +26,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_admin_section_banner_path(@section,@banner) %> |
-  <%= link_to "Destroy", admin_section_banner_path(@section,@banner), :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_section_banners_path(@section) %>
+  <%= link_to "Editar", edit_admin_section_banner_path(@section,@banner), :class => "button" %> |
+  <%= link_to "Deletar", admin_section_banner_path(@section,@banner), :class => "button", :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Ver Todos", admin_section_banners_path(@section), :class => "button" %>
 </p>

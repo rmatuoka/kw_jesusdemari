@@ -10,6 +10,10 @@
   <%= @notice.body %>
 </p>
 <p>
+  <strong>Imagem:</strong>
+  <%= image_tag(@notice.image.url(:thumb)) %>
+</p>
+<p>
   <strong>Publicada:</strong>
   <%= @notice.published %>
 </p>

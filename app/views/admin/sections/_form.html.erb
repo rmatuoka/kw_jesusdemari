@@ -4,5 +4,6 @@
     <%= f.label :title %><br />
     <%= f.text_field :title, :placeholder => "Título", :class => "twelve columns" %>
   </p>
+  <p> <%= f.label :page, "Página"%> <%= f.select(:page,options_for_select([['Home','1'],['Grupo JDM','2'],['Serviços','3'],['Produtos','4'],['Novidades','5'],['Sustentabilidade','6'],['Contato','7']], @section.page)) %> </p>
   <p><%= f.submit "Salvar", :class => "button" %></p>
-<% end %>
+<% end %> 

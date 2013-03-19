@@ -1,13 +1,29 @@
-<%= form_for [:admin,@section,@banner] do |f| %>
+<%= form_for ([:admin,@section,@banner], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => "Título", :class => "twelve columns" %>
   </p>
   <p>
-    <%= f.label :link %><br />
-    <%= f.text_field :link %>
+    <%= f.label :image, "Imagem" %> 
+    <%= f.file_field :image %>
+    
   </p>
+  <%if @banner.image.file?%>
+
+  <p> 
+
+  <%= image_tag(@banner.image.url(:thumb)) %>
+
+  </p>
+<% end %>
+
+
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link, :placeholder => "Endereço do Link", :class => "twelve columns" %>
+  </p>
+  <p> <%= f.label :target, "Destino"%> <%= f.select(:target,options_for_select([['_self'],['_blank']], @banner.target)) %> </p>
   <p>
     <%= f.label :published %><br />
     <%= f.check_box :published %>
@@ -16,5 +32,5 @@
     <%= f.label :active %><br />
     <%= f.check_box :active %>
   </p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
 <% end %>
