@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<%= stylesheet_link_tag "default"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jcycle.js" %>
+<script>
+jQuery(document).ready(function(){ 
+	 $('#slide-sustainability').cycle({
+			fx:     'scrollHorz', 
+    		speed:  'slow', 
+    		timeout: 0, 
+    		next:   '#sustainability-next', 
+    		prev:   '#sustainability-prev'
+	});
+	
+	$('#sustentabilidade').css('background-position','bottom');
+});
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=228638123874618";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {lang: 'pt-BR'}
+</script>
+</head>
+<body>
+<div id='container'>
+	<div id='top-bar'>
+		<div id='top-bar-content'>
+			<div id='top-bar-left'>
+				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
+			</div>
+			<div id='top-bar-right'>
+				<form>
+					<label>Usuário</label><input type='text' />
+					<label>Senha</label><input type='text' />
+					<input type='image' src='../images/btn_login.png' class='input-img' />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id='content'>
+		<div id='header'>
+			<div id='header-logo'>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-social'>
+				<div class="fb-like" data-send="false" data-layout="box_count" data-width="150" data-show-faces="false" style='top:-3px;'></div>
+				<div class="g-plusone" data-size="tall"></div>
+			</div>
+			<div id='header-chat'>
+				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-menu'>
+				<ul>
+					<a href='javascript:void(0)'><li id='grupo'><li></a>
+					<a href='javascript:void(0)'><li id='servicos'><li></a>
+					<a href='javascript:void(0)'><li id='produtos'><li></a>
+					<a href='javascript:void(0)'><li id='novidades'><li></a>
+					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
+					<a href='javascript:void(0)'><li id='contato'><li></a>
+				</ul>
+			</div>
+		</div>
+		<div id='article'>
+			<div id='article-content'>
+				<div id='top-sustainability'>
+					<h1>Sustentabilidade</h1>
+				</div>
+				<div class='clear'></div>
+				<div id='sustainability-article'>
+					<h1>Sustentabilidade<br>O Que é a Sustentabilidade Ambiental</h1>
+					<p>A sustentabilidade é um ideal sistemático que se perfaz principalmente pela ação, e pela constante busca entre desenvolvimento econômico e ao mesmo tempo preservação do ecossistema. Podem-se citar medidas que estão no centro da questão da sustentabilidade ambiental: a aquisição de medidas que sejam realistas para os setores das atividades humanas.<br>
+
+Os pontos elementares da sustentabilidade visam à própria sobrevivência no planeta, tanto no presente quanto no futuro. Esses princípios são: utilização de fontes energéticas que sejam renováveis, em detrimento das não renováveis.<br>
+
+Pode-se exemplificar esse conceito com a medida e com o investimento que vem sido adotado no Brasil com relação ao biocombustível, que por mais que não tenha mínina autonomia para substituir o petróleo, ao menos visa reduzir seus usos. O segundo princípio refere-se ao uso moderado de toda e qualquer fonte renovável, nunca extrapolando o que ela pode render. Em um quadro mais geral, pode-se fundamentar a sustentabilidade ambiental como um meio de amenizar (a curto e longo prazo simultaneamente) os danos provocados no passado. A sustentabilidade ambiental também se correlaciona com os outros diversos setores da atividade humana, como o industrial, por exemplo.<br>
+
+A sua aplicação pode ser feita em diversos níveis: a adoção de fonte de energias limpas está entre as preocupações centrais, algumas empresas tem desenvolvidos projetos de sustentabilidade voltando-se para aproveitamento do gás liberado em aterros sanitários, dando energia para populações que habitam proximamente a esses locais. Outro exemplo de sua aplicação está em empresas, como algumas brasileiras de cosméticos, que objetivam a extração cem por cento renováveis de seus produtos. O replantio de áreas degradadas, assim como a elaboração de projetos que visem áreas áridas e com acentuada urgência de tratamento são mais exemplos que já vêm sido tomados.<br>
+
+Pode-se afirmar que as medidas estatais corroboram perceptivelmente com a sustentabilidade ambiental. Sendo necessário não apenas um investimento capital em tecnologias que viabilizem a extração e o desenvolvimento sustentável, mas também conta com atitudes sistemáticas em diversos órgãos sociais e políticos. Como por exemplo, a propaganda, a educação e a lei.</p>
+				</div>
+				<div id='slide-sustainability'>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+				</div>
+				<div id='sustainability-next'>
+				
+				</div>
+				<div id='sustainability-prev'>
+				
+				</div>
+			</div>
+			<div class='clear'></div>
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				<ul>
+					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
+				</ul>
+			</div>
+			<div id='footer-right'>
+				<p>Jesus de Mari  © 2013</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

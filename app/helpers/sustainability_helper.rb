@@ -1,0 +1,2 @@
+module SustainabilityHelper
+end

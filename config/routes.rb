@@ -1,5 +1,10 @@
 KwJesusdemari::Application.routes.draw do
 
+  get "contacts/new"
+
+  get "contacts/show"
+
+  get "sustainability/index"
 
   get "products/index"
 
