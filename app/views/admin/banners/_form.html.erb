@@ -23,7 +23,12 @@
     <%= f.label :link %><br />
     <%= f.text_field :link, :placeholder => "Endereço do Link", :class => "twelve columns" %>
   </p>
-  <p> <%= f.label :target, "Destino"%> <%= f.select(:target,options_for_select([['_self'],['_blank']], @banner.target)) %> </p>
+  <p>
+    <%= f.label :target, "Destino"%> <%= f.select(:target,options_for_select([['_self'],['_blank']], @banner.target)) %>
+  </p>
+  <p>
+    <%= f.label :position, "Posição"%> <%= f.select(:position,options_for_select([['Topo','1'],['Parceiros','2']], @banner.position)) %>
+  </p>
   <p>
     <%= f.label :published %><br />
     <%= f.check_box :published %>

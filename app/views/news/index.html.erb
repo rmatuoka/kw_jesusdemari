@@ -50,7 +50,7 @@ jQuery(document).ready(function(){
 	<div id='content'>
 		<div id='header'>
 			<div id='header-logo'>
-				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), home_index_path %>
 			</div>
 			<div id='header-social'>
 				<div class="fb-like" data-send="false" data-layout="box_count" data-width="150" data-show-faces="false" style='top:-3px;'></div>
@@ -76,72 +76,20 @@ jQuery(document).ready(function(){
 					<h1>NOVIDADES</h1>
 				</div>
 				<div class='clear'></div>
+        <% @news.each do |notice|%>
 				<div id='article-news-box'>
 					<div id='article-news-box-img'>
-						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
+						<%= image_tag(notice.image.url("index"), :height=>'133', :width=>'172', :alt=> notice.title, :title=> notice.title) %>
 					</div>
-					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=> notice.title, :title=> notice.title), news_path(notice.id) %>
 					<div id='article-news-box-info'>
-						<h2>RESPONSABILIDADE AMBIENTAL</h2>
-						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
-							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
+						<h2><%= notice.title %></h2>
+            <%= raw(notice.summary) %>
+						
 					</div>
 				</div>
-				<div id='article-news-box'>
-					<div id='article-news-box-img'>
-						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
-					</div>
-					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-					<div id='article-news-box-info'>
-						<h2>RESPONSABILIDADE AMBIENTAL</h2>
-						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
-							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
-					</div>
-				</div>
-				<div id='article-news-box'>
-					<div id='article-news-box-img'>
-						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
-					</div>
-					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-					<div id='article-news-box-info'>
-						<h2>RESPONSABILIDADE AMBIENTAL</h2>
-						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
-							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
-					</div>
-				</div>
-				<div id='article-news-box'>
-					<div id='article-news-box-img'>
-						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
-					</div>
-					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-					<div id='article-news-box-info'>
-						<h2>RESPONSABILIDADE AMBIENTAL</h2>
-						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
-							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
-					</div>
-				</div>
-				<div id='article-news-box'>
-					<div id='article-news-box-img'>
-						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
-					</div>
-					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-					<div id='article-news-box-info'>
-						<h2>RESPONSABILIDADE AMBIENTAL</h2>
-						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
-							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
-					</div>
-				</div>
-				<div id='article-news-box'>
-					<div id='article-news-box-img'>
-						<%= image_tag('sample-news.jpg', :height=>'133', :width=>'172', :alt=>'Castelatto', :title=>'Castelatto') %>
-					</div>
-					<%= link_to image_tag('btn_leia_mais.png', :height=>'151', :width=>'93', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-					<div id='article-news-box-info'>
-						<h2>RESPONSABILIDADE AMBIENTAL</h2>
-						<p>"Onde quer que atuemos, queremos contribuir para melhorar a qualidade de vida e defender o meio ambiente"<br><br>
-							Além disto, o mais importante documento da legislação brasileira diz em um dos seus Capítulos, que:</p>
-					</div>
-				</div>
+        <% end %>
+				
 			</div>
 			<div class='clear'></div>
 		</div>

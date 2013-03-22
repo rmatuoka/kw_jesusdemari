@@ -4,9 +4,19 @@
   <tr>
     <h1>Seções</h1>
   </tr>
-  <% for section in @sections %>
+  <tr>
+      <td>
+        <p><strong>Título</strong></p>
+      </td>
+      <td>
+        <p><strong>Página</strong></p>
+      </td>
+    </tr>
     <tr>
+  <% for section in @sections %>
+    
       <td><%= section.title %></td>
+      <td><%= translate_section_page(section.page) %></td>
       <td><%= link_to "Ver", [:admin, section], :class => "secondary small button" %></td>
       <td><%= link_to "Editar", edit_admin_section_path(section), :class => "secondary small button" %></td>
       <td><%= link_to "Deletar", [:admin, section], :confirm => 'Tem certeza?', :method => :delete, :class => "secondary small button" %></td>

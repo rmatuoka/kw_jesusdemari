@@ -5,14 +5,10 @@ KwJesusdemari::Application.routes.draw do
 
   get "products/show"
 
-  get "news/index"
-
-  get "news/show"
-
   get "group/index"
 
   get "home/index"
-
+  resources :news
   resources :user_sessions
   resources :users
   resources :password_resets

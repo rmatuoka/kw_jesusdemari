@@ -1,66 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Jesus de Mari - Pré-moldados em Concreto</title>
-<%= stylesheet_link_tag "default"%>
-<%= javascript_include_tag :defaults %>
-<%= javascript_include_tag "jcycle.js" %>
-<script>
-jQuery(document).ready(function(){ 
-	 $('#slide-home')
-		 .before('<div id="nav">')
-		 .cycle({
-			fx:     'scrollRight', 
-			speed:  'fast', 
-			timeout: 0, 
-			pager:  '#nav'
-	});
-});
+<%content_for :head do%>
+  <script>
+  jQuery(document).ready(function(){ 
+     $('#slide-home')
+       .before('<div id="nav">')
+       .cycle({
+        fx:     'scrollRight', 
+        speed:  'fast', 
+        timeout: 0, 
+        pager:  '#nav'
+    });
+  });
+
 </script>
-</head>
-<body>
-<div id='container'>
-	<div id='top-bar'>
-		<div id='top-bar-content'>
-			<div id='top-bar-left'>
-				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
-			</div>
-			<div id='top-bar-right'>
-				<form>
-					<label>Usuário</label><input type='text' />
-					<label>Senha</label><input type='text' />
-					<input type='image' src='../images/btn_login.png' class='input-img' />
-				</form>
-			</div>
-		</div>
-	</div>
-	<div id='content'>
-		<div id='header'>
-			<div id='header-logo'>
-				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-			</div>
-			<div id='header-chat'>
-				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-			</div>
-			<div id='header-menu'>
-				<ul>
-					<a href='javascript:void(0)'><li id='grupo'><li></a>
-					<a href='javascript:void(0)'><li id='servicos'><li></a>
-					<a href='javascript:void(0)'><li id='produtos'><li></a>
-					<a href='javascript:void(0)'><li id='novidades'><li></a>
-					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
-					<a href='javascript:void(0)'><li id='contato'><li></a>
-				</ul>
-			</div>
-		</div>
-		<div id='article'>
+<%end%>
+
 			<div id='slide-home'>
         <% if @highlights.count > 0 %>
         
         <% @highlights.each do |featured| %>
         
-        <% featured.banners.each do |banner| %>
+        <% 
+        @destaques = Banner.all(:conditions => ['position=1 and section_id=?',featured])
+        @destaques.each do |banner| 
+        %>
+
 
         <%= link_to image_tag(banner.image.url("rotative")),banner.link,:target => banner.target%>
         
@@ -83,7 +46,7 @@ jQuery(document).ready(function(){
 						<div id='article-left-box-info'>
 							<h2><%=n.title%></h2>
 							<p><%=n.summary%></p>
-							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>n.title, :title=>n.title), news_path(n.id) %>
 						</div>
 					</div>
           <%end%>
@@ -96,33 +59,19 @@ jQuery(document).ready(function(){
 					<div id='article-right-title'>
 						<h1>Parceiro</h1>
 					</div>
+          <% @highlights.each do |p| %>
+          
+          <% 
+          @destaques = Banner.all(:conditions => ['position=2 and section_id=?',p])
+          @destaques.each do |parceiros|
+          %>
+          
 					<div id='article-right-box'>
-						<%= link_to image_tag('sample2.jpg', :height=>'295', :width=>'378', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+						<%= link_to image_tag(parceiros.image.url("partner")),parceiros.link, :target => parceiros.target, :alt=>parceiros.title, :title=>parceiros.title %>
 					</div>
-					<div id='article-right-box'>
-						<%= link_to image_tag('sample3.jpg', :height=>'160', :width=>'378', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-					</div>
+          <% end %>
+          <% end %>
 				</div>
 				<div class='clear'></div>
 			</div>
-			<div class='clear'></div>
-		</div>
-		<div id='footer'>
-			<div id='footer-left'>
-				<ul>
-					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
-				</ul>
-			</div>
-			<div id='footer-right'>
-				<p>Jesus de Mari  © 2013</p>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
-</html>
+			

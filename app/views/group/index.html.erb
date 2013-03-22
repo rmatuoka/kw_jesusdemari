@@ -1,11 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<%= stylesheet_link_tag "default"%>
-<%= javascript_include_tag :defaults %>
-<%= javascript_include_tag "jcycle.js" %>
+<%content_for :head do%>
 <script>
 jQuery(document).ready(function(){ 
 	 $('#slide-group').cycle({
@@ -19,6 +12,7 @@ jQuery(document).ready(function(){
 	$('#grupo').css('background-position','bottom');
 });
 </script>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -30,47 +24,8 @@ jQuery(document).ready(function(){
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
   {lang: 'pt-BR'}
 </script>
-</head>
-<body>
-<div id='container'>
-	<div id='top-bar'>
-		<div id='top-bar-content'>
-			<div id='top-bar-left'>
-				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
-			</div>
-			<div id='top-bar-right'>
-				<form>
-					<label>Usuário</label><input type='text' />
-					<label>Senha</label><input type='text' />
-					<input type='image' src='../images/btn_login.png' class='input-img' />
-				</form>
-			</div>
-		</div>
-	</div>
-	<div id='content'>
-		<div id='header'>
-			<div id='header-logo'>
-				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-			</div>
-			<div id='header-social'>
-				<div class="fb-like" data-send="false" data-layout="box_count" data-width="150" data-show-faces="false" style='top:-3px;'></div>
-				<div class="g-plusone" data-size="tall"></div>
-			</div>
-			<div id='header-chat'>
-				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
-			</div>
-			<div id='header-menu'>
-				<ul>
-					<a href='javascript:void(0)'><li id='grupo'><li></a>
-					<a href='javascript:void(0)'><li id='servicos'><li></a>
-					<a href='javascript:void(0)'><li id='produtos'><li></a>
-					<a href='javascript:void(0)'><li id='novidades'><li></a>
-					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
-					<a href='javascript:void(0)'><li id='contato'><li></a>
-				</ul>
-			</div>
-		</div>
-		<div id='article'>
+<%end%>
+
 			<div id='article-content'>
 				<div id='top-group'>
 					<h1>A Empresa</h1>
@@ -90,10 +45,20 @@ A nossa linha de produção é uma família que remonta a mais de 30 anos de his
 Contamos com um completo estoque e com uma frota preparada e apta a agilizar o processo de entrega, em qualquer quantidade em todo território em nível nacional.</p>
 				</div>
 				<div id='slide-group'>
-					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
-					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
-					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
-					<%= image_tag('sample-group.jpg', :height=>'572', :width=>'950', :alt=>'Castelatto', :title=>'Castelatto') %>
+          <% if @group_rotative.count > 0 %>
+          <% @group_rotative.each do |group| %>
+          <% 
+          @banner = Banner.all(:conditions => ['position=1 and section_id=?',group])
+          @banner.each do |banner| 
+          %>
+
+
+          <%= link_to image_tag(banner.image.url("group")),banner.link,:target => banner.target%>
+        
+        <% end %>
+        
+        <% end %>
+        <% end %>
 				</div>
 				<div id='group-next'>
 				
@@ -102,24 +67,4 @@ Contamos com um completo estoque e com uma frota preparada e apta a agilizar o p
 				
 				</div>
 			</div>
-			<div class='clear'></div>
-		</div>
-		<div id='footer'>
-			<div id='footer-left'>
-				<ul>
-					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
-				</ul>
-			</div>
-			<div id='footer-right'>
-				<p>Jesus de Mari  © 2013</p>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
-</html>
+			

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jesus de Mari - Pré-moldados em Concreto</title>
+<%= stylesheet_link_tag "default"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jcycle.js" %>
+
+<script>
+  jQuery(document).ready(function(){
+    jQuery("#grupo").click(function(){
+      window.location.href = '<%=group_index_path%>'
+    });
+    jQuery("#servicos").click(function(){
+      window.location.href = '<%=products_index_path%>'
+    });
+    jQuery("#produtos").click(function(){
+      window.location.href = '<%=products_index_path%>'
+    });
+    jQuery("#novidades").click(function(){
+      window.location.href = '<%=news_index_path%>'
+    });
+    jQuery("#sustentabilidade").click(function(){
+      window.location.href = '<%=news_index_path%>'
+    });
+    jQuery("#contato").click(function(){
+      window.location.href = '<%=news_index_path%>'
+    });
+  });
+</script>
+<%=yield :head%>
+</head>
+<body>
+<div id='container'>
+	<div id='top-bar'>
+		<div id='top-bar-content'>
+			<div id='top-bar-left'>
+				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
+			</div>
+			<div id='top-bar-right'>
+				<form>
+					<label>Usuário</label><input type='text' />
+					<label>Senha</label><input type='text' />
+					<input type='image' src='../images/btn_login.png' class='input-img' />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id='content'>
+		<div id='header'>
+			<div id='header-logo'>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), home_index_path %>
+			</div>
+			<div id='header-chat'>
+				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-menu'>
+				<ul>
+					<li id='grupo'><li>
+					<li id='servicos'><li>
+					<li id='produtos'><li>
+					<li id='novidades'><li>
+					<li id='sustentabilidade'><li>
+					<li id='contato'><li>
+				</ul>
+			</div>
+		</div>
+		<div id='article'>
+      <%=yield%>
+      <div class='clear'></div>
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				<ul>
+					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
+				</ul>
+			</div>
+			<div id='footer-right'>
+				<p>Jesus de Mari  © 2013</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
