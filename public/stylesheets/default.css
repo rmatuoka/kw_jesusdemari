@@ -7,6 +7,12 @@
 @import url(group.css);
 @import url(news.css);
 @import url(products-index.css);
+@import url(products-show.css);
+@import url(sustainability.css);
+@import url(contacts-new.css);
+@import url(contacts-show.css);
+
+
 
 body{
 	background-image:url('../images/bg_site.jpg');

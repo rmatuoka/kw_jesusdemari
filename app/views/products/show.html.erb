@@ -1,2 +1,214 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<%= stylesheet_link_tag "default"%>
+<%= stylesheet_link_tag "jquery.jscrollpane"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jcycle.js" %>
+<%= javascript_include_tag "jquery.jscrollpane.min.js" %>
+<%= javascript_include_tag "jquery.mousewheel.js" %>
+<script>
+$(function()
+	{
+		$('.scroll-pane').jScrollPane();
+	});
+jQuery(document).ready(function(){ 
+	 $('#slide-products-index').cycle({
+			fx:     'scrollHorz', 
+    		speed:  'slow', 
+    		timeout: 0, 
+    		next:   '#products-index-next', 
+    		prev:   '#products-index-prev'
+	});
+	
+	$('#produtos').css('background-position','bottom');
+	
+	$('#itens-prod a').click(function(){
+		$('#itens-prod').css('background-position','left top');
+		$('#int-list-prod').removeClass('hide');
+		});
+	
+	
+});
+
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=228638123874618";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {lang: 'pt-BR'}
+</script>
+</head>
+<body>
+<div id='container'>
+	<div id='top-bar'>
+		<div id='top-bar-content'>
+			<div id='top-bar-left'>
+				<%= link_to "Registrar-se", 'http://www.uol.com.br' %>
+			</div>
+			<div id='top-bar-right'>
+				<form>
+					<label>Usuário</label><input type='text' />
+					<label>Senha</label><input type='text' />
+					<input type='image' src='../images/btn_login.png' class='input-img' />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id='content'>
+		<div id='header'>
+			<div id='header-logo'>
+				<%= link_to image_tag('logo_jdm.png', :height=>'171', :width=>'205', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-social'>
+				<div class="fb-like" data-send="false" data-layout="box_count" data-width="150" data-show-faces="false" style='top:-3px;'></div>
+				<div class="g-plusone" data-size="tall"></div>
+			</div>
+			<div id='header-chat'>
+				<%= link_to image_tag('ico_chat.png', :height=>'105', :width=>'340', :alt=>'Castelatto', :title=>'Castelatto'), 'www.uol.com.br' %>
+			</div>
+			<div id='header-menu'>
+				<ul>
+					<a href='javascript:void(0)'><li id='grupo'><li></a>
+					<a href='javascript:void(0)'><li id='servicos'><li></a>
+					<a href='javascript:void(0)'><li id='produtos'><li></a>
+					<a href='javascript:void(0)'><li id='novidades'><li></a>
+					<a href='javascript:void(0)'><li id='sustentabilidade'><li></a>
+					<a href='javascript:void(0)'><li id='contato'><li></a>
+				</ul>
+			</div>
+		</div>
+		<div id='article'>
+			<div id='article-content'>
+				<div id='top-products-index'>
+					<h1>Produtos</h1>
+				</div>
+				<div class='clear'></div>
+				<div id='products-index-article'>
+					<h1>Produtos</h1>
+					<p>Nossa empresa disponibiliza a seus clientes uma ampla cartela de produtos relacionados a artefatos de concreto, incluindo Tubos de Concreto, Anéis de Concreto e Aduelas de Concreto todos produzidos pensando na mais alta qualidade de seus produtos e numa consciência ambiental no processo de confecção.</p>
+					<h1>Produção</h1>
+					<p>Nossa empresa emprega as mais avançadas técnicas na produção de artefatos de concreto e Tubos de Concreto do mercado, sempre estando em acordo com as NBRs vigentes, procuramos propiciar a maior variedade de artefatos de concreto,tendo em mente um melhor atendimento de nossos clientes.</p>
+				</div>
+			</div>
+			<div id='box-products-index-1'>
+				<%= image_tag('logo_1.jpg', :height=>'138', :width=>'291', :alt=>'Castelatto', :title=>'Castelatto', :class=>'logo') %>
+				<h1>A JDM Artefatos de Concreto</h1>
+				<p class='text-box-prod'>Nossa empresa disponibiliza a seus clientes uma ampla cartela de produtos relacionados a artefatos de concreto, incluindo Tubos de Concreto, Anéis de Concreto e Aduelas de Concreto todos produzidos pensando na mais alta qualidade de seus produtos e numa consciência ambiental no processo de confecção.</p>
+				<div id='box-mais-prod-1'>
+					<%= image_tag('sample.png', :height=>'70', :width=>'105', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<p><b>A JDM Artefatos</b> de Concreto trás a qualidade de quem fabrica mais do que artefatosa de concreto, fabrica soluções inteligen tes para sua obra.</p>
+					<a href='#' class='btn-mais-prod-1'></a>
+				</div>
+				<div id='box-mais-prod-1'>
+					<%= image_tag('sample.png', :height=>'70', :width=>'105', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<p><b>A JDM Artefatos</b> de Concreto trás a qualidade de quem fabrica mais do que artefatosa de concreto, fabrica soluções inteligen tes para sua obra.</p>
+					<a href='#' class='btn-mais-prod-1'></a>
+				</div>
+				<div id='box-mais-prod-1'>
+					<%= image_tag('sample.png', :height=>'70', :width=>'105', :alt=>'Castelatto', :title=>'Castelatto') %>
+					<p><b>A JDM Artefatos</b> de Concreto trás a qualidade de quem fabrica mais do que artefatosa de concreto, fabrica soluções inteligen tes para sua obra.</p>
+					<a href='#' class='btn-mais-prod-1'></a>
+				</div>
+			</div>
+			<div id='content-product'>
+				<div id='content-product-left'>
+					<h1>Conheça nossa linha</h1>
+					<p>A JDM Artefatos de Concreto conta com uma completa linha de produtos voltados ha solucionar seus problemas.<p>
+					<div id='itens-prod'>
+						<a href='javascript:void(0)'>Anéis de Concreto</a>
+						<div id='int-list-prod' class='hide'>
+							<ul>
+								<li><a href='javascript:void(0)'>Anéis de Concreto Liso</a></li>
+								<li><a href='javascript:void(0)'>Perfurados</a></li>
+								<li><a href='javascript:void(0)'>Liso SANASA e SABESP</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id='content-product-right'>
+					<h1>Anéis de Concreto</h1>
+					<div class='scroll-pane'>
+						Anéis de Concreto Lisos
+
+Anel de Concreto  é um artefato de concreto que  é  utilizados em obras para formação de estações de  tratamento de esgoto como também para fazer tubulações de poços e fossas. Trabalhamos com o Anel de Concreto Liso e o Anel de Concreto Perfurado
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+
+Os anéis de concreto podem seguir padrões específicos de algumas empresas em especial  tais como:   anéis de concreto padrão SABESP ; anéis de concreto padrão SANASA e anéis de concreto padrão SAAE.
+
+Onde as mesmas podem determinar a espessura e resistência para cada necessidade, até no método de inspeção de recebimento, considerada uma das mais criteriosas conforme NBR 5426.
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+Anéis de Concreto Lisos
+
+Anel de Concreto  é um artefato de concreto que  é  utilizados em obras para formação de estações de  tratamento de esgoto como também para fazer tubulações de poços e fossas. Trabalhamos com o Anel de Concreto Liso e o Anel de Concreto Perfurado
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+
+Os anéis de concreto podem seguir padrões específicos de algumas empresas em especial  tais como:   anéis de concreto padrão SABESP ; anéis de concreto padrão SANASA e anéis de concreto padrão SAAE.
+
+Onde as mesmas podem determinar a espessura e resistência para cada necessidade, até no método de inspeção de recebimento, considerada uma das mais criteriosas conforme NBR 5426.
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+Anéis de Concreto Lisos
+
+Anel de Concreto  é um artefato de concreto que  é  utilizados em obras para formação de estações de  tratamento de esgoto como também para fazer tubulações de poços e fossas. Trabalhamos com o Anel de Concreto Liso e o Anel de Concreto Perfurado
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+
+Os anéis de concreto podem seguir padrões específicos de algumas empresas em especial  tais como:   anéis de concreto padrão SABESP ; anéis de concreto padrão SANASA e anéis de concreto padrão SAAE.
+
+Onde as mesmas podem determinar a espessura e resistência para cada necessidade, até no método de inspeção de recebimento, considerada uma das mais criteriosas conforme NBR 5426.
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+Anéis de Concreto Lisos
+
+Anel de Concreto  é um artefato de concreto que  é  utilizados em obras para formação de estações de  tratamento de esgoto como também para fazer tubulações de poços e fossas. Trabalhamos com o Anel de Concreto Liso e o Anel de Concreto Perfurado
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+
+Os anéis de concreto podem seguir padrões específicos de algumas empresas em especial  tais como:   anéis de concreto padrão SABESP ; anéis de concreto padrão SANASA e anéis de concreto padrão SAAE.
+
+Onde as mesmas podem determinar a espessura e resistência para cada necessidade, até no método de inspeção de recebimento, considerada uma das mais criteriosas conforme NBR 5426.
+
+Muitas obras de saneamento como fossas septicas , sumidouros, poços e cloradores são formados por esses anéis de concreto.
+Para conhecer melhor essas obras veja mais com a Tecnosab Tecnologia em Saneamento Básico.
+					</div>
+				</div>
+				<div class='clear'></div>
+			</div>			
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				<ul>
+					<li><%= link_to "Grupo JDM", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Produtos", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Novidades", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Sustentabilidade", 'http://www.uol.com.br' %></li>
+					<li><%= link_to "Contato", 'http://www.uol.com.br' %></li>
+				</ul>
+			</div>
+			<div id='footer-right'>
+				<p>Jesus de Mari  © 2013</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

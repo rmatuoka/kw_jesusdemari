@@ -1,0 +1,93 @@
+#content-product{
+	position:relative;
+	background-image:url('../images/bg_article.png');
+	margin-top:-40px;
+	padding-left:15px;
+	}
+	
+	#content-product-left{
+		width:285px;
+		float:left;
+		}
+	
+		#content-product-left h1{
+			font-family: 'Oxygen', sans-serif;
+			font-size:20px;
+			color:#2d4761;
+			font-weight:bold;
+			margin-top:25px;
+			margin-bottom:25px;
+			}
+		
+		#content-product-left p{
+			font-family: 'Oxygen', sans-serif;
+			font-size:14px;
+			color:#2d4761;
+			margin-bottom:25px;
+			}
+		
+		#itens-prod{
+			position:relative;
+			display:block;
+			width:240px;
+			height:29px;
+			padding-left:45px;
+			padding-top:6px;
+			background-image:url('../images/bg_list_prod.png');
+			background-position:left bottom;
+			background-repeat:no-repeat;		
+			}
+				
+			#itens-prod a{
+				font-family: 'Oxygen', sans-serif;
+				font-size:20px;
+				color:#559bda;
+				text-decoration:underline !important;
+				}
+					
+				#int-list-prod ul{
+					margin-top:20px;
+					}
+					
+					#int-list-prod ul li{
+						list-style:disc;
+						font-family: 'Oxygen', sans-serif;
+						font-size:14px;
+						color:#2d4761;
+						text-decoration:underline !important;
+						margin-bottom:5px;
+						}
+						
+						#int-list-prod ul li a{
+							font-family: 'Oxygen', sans-serif;
+							font-size:14px;
+							color:#2d4761;
+							text-decoration:underline !important;
+							}
+	
+	#content-product-right{
+		width:625px;
+		height:635px;
+		float:right;
+		border:1px solid red;
+		margin-top:135px;
+		}
+		
+		#content-product-right h1{
+			width:600px;
+			height:35px;
+			background-color:#559bda;
+			font-family: 'Oxygen', sans-serif;
+			font-size:20px;
+			color:#fff;
+			text-decoration:underline !important;
+			padding-left:25px;
+			padding-top:15px;
+			}
+	
+	.scroll-pane
+{
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+}

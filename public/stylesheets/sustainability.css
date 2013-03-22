@@ -1,14 +1,14 @@
-#top-group{
+#top-sustainability{
 	display:block !important;
 	width:950px;
 	height:250px;
 	margin-top:-10px;
-	background-image:url('../images/top-group.jpg');
+	background-image:url('../images/top-sustainability.jpg');
 	background-position:top right;
 	background-repeat:no-repeat;
 	}
 
-	#top-group h1{
+	#top-sustainability h1{
 		float:right;
 		font-family: 'Oxygen', sans-serif;
 		font-size:20px;
@@ -18,14 +18,14 @@
 		margin-top:205px;
 		}
 
-#group-article{
+#sustainability-article{
 	width:910px;
 	padding:40px 20px;
 	margin-top:10px;
 	background-image:url('../images/bg_article.png');
 	}
 	
-	#group-article h1{
+	#sustainability-article h1{
 		font-family: 'Oxygen', sans-serif;
 		font-size:20px;
 		color:#45718c;
@@ -34,7 +34,7 @@
 		line-height:30px;
 		}
 	
-	#group-article h2{
+	#sustainability-article h2{
 		font-family: 'Oxygen', sans-serif;
 		font-size:15px;
 		color:#45718c;
@@ -42,7 +42,7 @@
 		margin-bottom:20px;
 		}
 	
-	#group-article p{
+	#sustainability-article p{
 		font-family: 'Oxygen', sans-serif;
 		font-size:15px;
 		color:#45718c;
@@ -50,14 +50,14 @@
 		line-height:25px;
 		}
 	
-#slide-group{
+#slide-sustainability{
 	position:relative;
 	width:950px;
 	height:575px;
 	z-index:1000;
 	}
 
-#group-next{
+#sustainability-next{
 	position:relative;
 	width:98px;
 	height:575px;
@@ -70,7 +70,7 @@
 	cursor:pointer;
 	}
 
-#group-prev{
+#sustainability-prev{
 	position:relative;
 	width:98px;
 	height:575px;
