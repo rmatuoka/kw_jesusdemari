@@ -1,5 +1,7 @@
 KwJesusdemari::Application.routes.draw do
 
+  #namespace(:admin){  }
+
   get "contacts/new"
 
   get "contacts/show"
@@ -20,6 +22,7 @@ KwJesusdemari::Application.routes.draw do
   resources :atualizar
   #Inicio do namespace Admin
   namespace(:admin){
+  resources :products
   resources :notices
     resources :static_contents
     resources(:sections){

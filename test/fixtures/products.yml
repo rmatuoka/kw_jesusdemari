@@ -1,0 +1,9 @@
+one:
+  summary: MyString
+  body: MyText
+  link: MyString
+
+two:
+  summary: MyString
+  body: MyText
+  link: MyString

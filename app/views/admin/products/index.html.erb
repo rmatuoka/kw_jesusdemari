@@ -1,0 +1,23 @@
+<% title "Produtos" %>
+
+<table class="twelve columns">
+  <tr>
+    <th>Resumo</th>
+    <th>Link</th>
+    <th>Publicado</th>
+    <th>Ativo</th>
+  </tr>
+  <% for product in @products %>
+    <tr>
+      <td><%= product.summary %></td>
+      <td><%= product.link %></td>
+      <td><%= product.published %></td>
+      <td><%= product.active %></td>
+      <td><%= link_to "Show", [:admin, product], :class => "secondary small button" %></td>
+      <td><%= link_to "Edit", edit_admin_product_path(product), :class => "secondary small button" %></td>
+      <td><%= link_to "Destroy", [:admin, product], :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "+ Produto", new_admin_product_path, :class => "button" %></p>

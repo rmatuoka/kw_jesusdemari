@@ -1,7 +1,7 @@
 <% title "Admin/Banner" %>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Título:</strong>
   <%= @banner.title %>
 </p>
 <p>
@@ -13,20 +13,20 @@
   <%= @banner.link %>
 </p>
 <p>
-  <strong>Section:</strong>
+  <strong>Seção:</strong>
   <%= @banner.section.title %>
 </p>
 <p>
-  <strong>Published:</strong>
+  <strong>Publicado:</strong>
   <%= print_active(@banner.published) %>
 </p>
 <p>
-  <strong>Active:</strong>
+  <strong>Ativo:</strong>
   <%= print_active(@banner.active) %>
 </p>
 
 <p>
-  <%= link_to "Editar", edit_admin_section_banner_path(@section,@banner), :class => "button" %> |
-  <%= link_to "Deletar", admin_section_banner_path(@section,@banner), :class => "button", :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "Ver Todos", admin_section_banners_path(@section), :class => "button" %>
+  <%= link_to "Editar", edit_admin_section_banner_path(@section,@banner), :class => "secondary small button" %> |
+  <%= link_to "Deletar", admin_section_banner_path(@section,@banner), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Ver Todos", admin_section_banners_path(@section), :class => "secondary small button" %>
 </p>
