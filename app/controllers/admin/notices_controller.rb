@@ -16,7 +16,7 @@ class Admin::NoticesController < ApplicationController
   def create
     @notice = Notice.new(params[:notice])
     if @notice.save
-      redirect_to [:admin, @notice], :notice => "Successfully created notice."
+      redirect_to admin_notices_path, :notice => "Successfully created notice."
     else
       render :action => 'new'
     end
