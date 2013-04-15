@@ -9,7 +9,6 @@ module ApplicationHelper
       when 6 then return "Sustentabilidade"
       when 7 then return "Contato"
     end
-  
   end
   def print_active(status)
     retorno = ''
