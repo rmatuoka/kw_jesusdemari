@@ -139,53 +139,110 @@
 						#article-contacts-box img{
 							float:right;
 							}
+							
+#table-contacts{
+	margin:0 auto;
+	margin-top:50px;
+	}
+
+#table-contacts td{
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#435b66;
+	font-weight:bold;
+	}
 
 .nome{
-	width:490px;
+	padding-left:5px;
+	width:485px;
 	height:35px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
+	margin-bottom:15px;
 	}
 
 .email{
-	width:490px;
+	padding-left:5px;
+	width:485px;
 	height:35px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
+	margin-bottom:15px;
 	}
 	
 .telefone{
-	width:100px;
+	padding-left:5px;
 	height:35px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
+	margin-bottom:15px;
+	margin-left:0px;
+	margin-right:10px;
 	}
 
 .cidade{
-	width:160px;
+	padding-left:5px;
+	width:150px;
 	height:35px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
+	margin-right:10px;
 	}
 
 .estado{
-	width:70px;
+	padding-left:5px;
+	width:65px;
 	height:35px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
 	}
 
 .assunto{
-	width:490px;
+	padding-left:5px;
+	width:485px;
 	height:35px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
+	margin-bottom:15px;
 	}
 
 .mensagem{
-	width:490px;
+	padding-left:5px;
+	width:482px;
 	height:130px;
 	border:0px solid transparent;
+	font-family: 'Oxygen', sans-serif;
+	font-size:13px;
+	color:#b5e0f3;
 	background-color:#45718c;
 	resize:none;
+	margin-bottom:15px;
+	}
+
+.tit_mensagem{
+	position:relative;
+	top:-120px;
+	}
+
+.enviar{
+	float:right;
+	margin-right:41px;
 	}
