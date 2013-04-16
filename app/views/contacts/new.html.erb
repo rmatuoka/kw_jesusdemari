@@ -47,7 +47,7 @@ jQuery(document).ready(function(){
 							Rua Antonio da Cunha Leite, 2455  Bairro Portão <br>
 							Atibaia - SP - CEP 12.948-110 </b></p>
 					<form>
-						<table width='610' align='center'>
+						<table width='610' align='center' id='table-contacts'>
 							<tr>
 								<td>Nome</td>
 								<td><input type='text' class='nome' /></td>
@@ -58,22 +58,23 @@ jQuery(document).ready(function(){
 							</tr>
 							<tr>
 								<td>Telefone</td>
-								<td><input type='text' class='telefone' /></td>
-								<td>Cidade</td>
-								<td><input type='text' class='cidade' /></td>
-								<td>Estado</td>
-								<td><input type='text' class='estado' /></td>
+								<td><input type='text' class='telefone' />
+								Cidade
+								<input type='text' class='cidade' />
+								Estado
+							  <input type='text' class='estado' /></td>
 							</tr>
 							<tr>
 								<td>Assunto</td>
 								<td><input type='text' class='assunto' /></td>
 							</tr>
 							<tr>
-								<td>Mensagem</td>
-								<td><textarea class='mensagem'></textarea></td>
+								<td valign="top" ><span class='tit_mensagem'>Mensagem</span></td>
+							  <td><textarea class='mensagem'></textarea></td>
 							</tr>
 							<tr>
-								<td>aaa</td>
+								<td></td>
+								<td><input type='image' class='enviar' src='../../images/btn-enviar.jpg' /></td>
 							</tr>
 						</table>
 					</form>
