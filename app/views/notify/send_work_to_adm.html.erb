@@ -1,0 +1,10 @@
+<html>
+<body>
+	<h1>CASTELATTO - Trabalhe conosco</h1>
+	<p>Nome: <%=@work.name%></p>
+	<p>Email: <%=@work.email%></p>
+	<p>Telefone: <%=@work.phone%></p>
+	<p>LinkedIn: <%=link_to "LinkedIn", @work.linkedin%></p>
+	<p><%=link_to "Download do CV", "http://www.castelatto.com.br/" + @work.curriculum.url()%></a></p>
+	</body>
+</html>
