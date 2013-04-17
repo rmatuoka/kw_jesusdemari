@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401163149) do
+ActiveRecord::Schema.define(:version => 20130416201217) do
 
   create_table "banners", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(:version => 20130401163149) do
     t.datetime "image_updated_at"
     t.string   "target"
     t.integer  "position"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "city"
+    t.string   "state"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "subject"
   end
 
   create_table "notices", :force => true do |t|
