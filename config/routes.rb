@@ -2,9 +2,9 @@ KwJesusdemari::Application.routes.draw do
 
   #namespace(:admin){  }
 
-  get "contacts/new"
+  #get "contacts/new"
 
-  get "contacts/show"
+  #get "contacts/show"
 
   get "group/index"
   get "home/index"
@@ -17,6 +17,7 @@ KwJesusdemari::Application.routes.draw do
   resources :users
   resources :password_resets
   resources :atualizar
+  resources :contacts
   #Inicio do namespace Admin
   namespace(:admin){
   resources :products
@@ -35,7 +36,7 @@ KwJesusdemari::Application.routes.draw do
   }
   #Final do namespace Admin
   
-  root :to => "user_sessions#new"
+  root :to => "home#index"
   match 'cadastro' => "users#new"
   match 'login' => 'user_sessions#new'  
   match 'logout' => 'user_sessions#destroy'  
