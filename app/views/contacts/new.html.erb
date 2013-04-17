@@ -51,12 +51,12 @@ jQuery(document).ready(function(){
 						<table width='610' align='center' id='table-contacts'>
 
 							<tr>
-								<td><%= label_tag :name, "Nome"%></td>
-								<td><%= f.text_field :name, :class =>"nome", :placeholder => "Nome" %></td>
+								<td>Nome</td>
+								<td><input type='text' class='nome' /></td>
 							</tr>
 							<tr>
-								<td><%= label_tag :mail, "E-mail"%></td>
-								<td><%= f.text_field :email, :class =>"email", :placeholder => "E-mail" %></td>
+								<td>E-mail</td>
+								<td><input type='text' class='email' /></td>
 							</tr>
 							<tr>
 
@@ -69,8 +69,8 @@ jQuery(document).ready(function(){
 
 							</tr>
 							<tr>
-								<td><%= label_tag :subject, "Assunto"%></td>
-								<td><%= f.text_field :subject, :class =>"assunto", :placeholder => "Assunto" %></td>
+								<td>Assunto</td>
+								<td><input type='text' class='assunto' /></td>
 							</tr>
 							<tr>
 
@@ -83,6 +83,5 @@ jQuery(document).ready(function(){
 
 							</tr>
 						</table>
-					<% end %>
 				</div>
 			</div>
