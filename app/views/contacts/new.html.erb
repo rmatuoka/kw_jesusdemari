@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
     		next:   '#contacts-next', 
     		prev:   '#contacts-prev'
 	});
-	
+
 	$('#contato').css('background-position','bottom');
 });
 </script>
@@ -32,12 +32,12 @@ jQuery(document).ready(function(){
 				<div class='clear'></div>
 				<div id='contacts-article'>
 					<%= link_to image_tag('btn_voltar.jpg', :height=>'46', :width=>'107', :alt=>'Castelatto', :title=>'Castelatto'), home_index_path, :id=>'btn_voltar' %>
-					
+
 					<p>Telefone: (11) 4416-7007 - Financeiro<br><br>
-					
+
 					<b>Novos Números</b><br>
 					4416-6890 / 4416-9891 / 4416-6892 / 4416-6893 / 4416-6894 / 4416-6895 / 4416-6896 / 4416-6897 / 4416-9899<br><br>
-					
+
 					<b>Entre em contato através dos e-mails:</b><br>
 					sac@jesusdemari.com.br ou atendimento@jesusdemari.com.br</p>
 					<div>
@@ -46,90 +46,45 @@ jQuery(document).ready(function(){
 					<p style='float:right; margin-top:-280px; margin-right:40px;'><b>Endereço:<br>
 							Rua Antonio da Cunha Leite, 2455  Bairro Portão <br>
 							Atibaia - SP - CEP 12.948-110 </b></p>
-<<<<<<< HEAD
 
-					<form>
+
+					<%= form_for ([@contact]) do |f| %>
 						<table width='610' align='center' id='table-contacts'>
 
-=======
-<<<<<<< HEAD
 
-					<form>
-						<table width='610' align='center' id='table-contacts'>
-
-=======
-					<form>
-						<table width='610' align='center' id='table-contacts'>
-
->>>>>>> bruno
->>>>>>> 2411f9ed7d38afb1be6cff8aec399e07cb9eb3ab
 							<tr>
-								<td>Nome</td>
-								<td><input type='text' class='nome' /></td>
+								<td><%= label_tag :name, "Nome"%></td>
+								<td><%= f.text_field :name, :class =>"nome" %></td>
 							</tr>
 							<tr>
-								<td>E-mail</td>
-								<td><input type='text' class='email' /></td>
+								<td><%= label_tag :email, "E-mail"%></td>
+								<td><%= f.text_field :email, :class => "email"%></td>
 							</tr>
 							<tr>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
+								<td><%= label_tag :phone, "Telefone"%></td>
+								<td><%= f.text_field :phone, :class => "telefone"%>
+								<%= label_tag :city, "Cidade"%>
+								<%= f.text_field :city, :class => "cidade"%>
+								<%= label_tag :state, "Estado"%>
+							  <%= f.text_field :state, :class => "estado"%></td>
 
-=======
-
->>>>>>> bruno
->>>>>>> 2411f9ed7d38afb1be6cff8aec399e07cb9eb3ab
-								<td>Telefone</td>
-								<td><input type='text' class='telefone' />
-								Cidade
-								<input type='text' class='cidade' />
-								Estado
-							  <input type='text' class='estado' /></td>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-
->>>>>>> bruno
->>>>>>> 2411f9ed7d38afb1be6cff8aec399e07cb9eb3ab
 							</tr>
 							<tr>
-								<td>Assunto</td>
-								<td><input type='text' class='assunto' /></td>
+								<td><%= label_tag :subject, "Assunto"%></td>
+								<td><%= f.text_field :subject, :class => "assunto"%></td>
 							</tr>
 							<tr>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-
->>>>>>> bruno
->>>>>>> 2411f9ed7d38afb1be6cff8aec399e07cb9eb3ab
-								<td valign="top" ><span class='tit_mensagem'>Mensagem</span></td>
-							  <td><textarea class='mensagem'></textarea></td>
+								<td valign="top" ><span class='tit_mensagem'><%= label_tag :message, "Mensagem"%></span></td>
+							  <td><%= f.text_area :message, :class => "mensagem"%></td>
 							</tr>
 							<tr>
 								<td></td>
-								<td><input type='image' class='enviar' src='../../images/btn-enviar.jpg' /></td>
-<<<<<<< HEAD
+								<td><%=image_submit_tag "btn-enviar.jpg", :class => "enviar"%></td>
 
 							</tr>
 						</table>
-					
-=======
-<<<<<<< HEAD
-
-=======
-
->>>>>>> bruno
-							</tr>
-						</table>
->>>>>>> 2411f9ed7d38afb1be6cff8aec399e07cb9eb3ab
+            <% end %>
 				</div>
 			</div>
