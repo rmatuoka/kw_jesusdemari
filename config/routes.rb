@@ -1,7 +1,5 @@
 KwJesusdemari::Application.routes.draw do
 
-  #namespace(:admin){  }
-
   #get "contacts/new"
 
   #get "contacts/show"
@@ -20,8 +18,12 @@ KwJesusdemari::Application.routes.draw do
   resources :contacts
   #Inicio do namespace Admin
   namespace(:admin){
-  resources :products
-  resources :notices
+    resources (:categories){
+      resources (:subcategories){
+        resources :products
+      }
+    }
+    resources :notices
     resources :static_contents
     resources(:sections){
 		resources :banners

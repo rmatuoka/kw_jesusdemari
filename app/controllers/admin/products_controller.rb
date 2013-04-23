@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 layout "inadmin"
+
+before_filter :load_subcategorie
   def index
     @products = Product.all
   end
