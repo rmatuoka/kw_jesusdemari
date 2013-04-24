@@ -1,11 +1,11 @@
-#scrollbar1 { width: 605px; clear: both; margin: 20px 0 10px; margin-left:10px;}
-#scrollbar1 .viewport { width: 585px; height: 605px; overflow: hidden; position: relative; }
-#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
-#scrollbar1 .thumb .end,
-#scrollbar1 .thumb { background-color: #516b9f; }
-#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
-#scrollbar1 .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
-#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
-#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
-#scrollbar1 .disable{ display: none; }
+.scrollbar_set { width: 605px; clear: both; margin: 20px 0 10px; margin-left:10px;}
+.viewport { width: 585px; height: 450px; overflow: hidden; position: relative; }
+.overview { list-style: none; position: absolute; left: 0; top: 0; }
+.thumb .end,
+.thumb { background-color: #516b9f; }
+.scrollbar { position: relative; float: right; width: 15px; }
+.track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+.thumb .end { overflow: hidden; height: 5px; width: 13px; }
+.disable{ display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }

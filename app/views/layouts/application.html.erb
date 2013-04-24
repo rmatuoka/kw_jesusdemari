@@ -21,10 +21,10 @@
       window.location.href = '<%=group_index_path%>'
     });
     jQuery("#servicos").click(function(){
-      window.location.href = '<%=products_index_path%>'
+      window.location.href = '<%=products_path%>'
     });
     jQuery("#produtos").click(function(){
-      window.location.href = '<%=products_index_path%>'
+      window.location.href = '<%=products_path%>'
     });
     jQuery("#novidades").click(function(){
       window.location.href = '<%=news_index_path%>'
@@ -82,7 +82,7 @@
 				<ul>
 					<li><%= link_to "Grupo JDM", group_index_path %></li>
 					<li><%= link_to "Serviços", 'http://www.uol.com.br' %></li>
-					<li><%= link_to "Produtos", products_index_path %></li>
+					<li><%= link_to "Produtos", products_path %></li>
 					<li><%= link_to "Novidades", news_index_path %></li>
 					<li><%= link_to "Sustentabilidade", sustainability_index_path %></li>
 					<li><%= link_to "Contato", new_contact_path %></li>

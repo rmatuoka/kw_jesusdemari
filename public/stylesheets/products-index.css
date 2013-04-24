@@ -139,12 +139,14 @@
 							float:right;
 							}
 
-#box-products-index-1{
+
+/*-------------------*/
+
+#box-products-index{
 	width:950px;
 	height:209px;
 	margin-top:20px;
 	margin-bottom:40px;
-	background-image:url('../images/bg_prod-1.png');
 	background-repeat:repeat-x;
 	background-color:#fff;
 	}
@@ -153,7 +155,7 @@
 	margin-top:20px;
 	}
 
-#box-products-index-1 h1{
+#box-products-index h1{
 	margin-left:310px;
 	font-family: 'Oxygen', sans-serif;
 	font-size:20px;
@@ -169,7 +171,7 @@
 	margin-top:30px;
 	}
 
-#box-mais-prod-1{
+#box-mais-prod{
 	position:relative;
 	width:300px;
 	height:200px;
@@ -182,32 +184,98 @@
 	float:left;
 	}
 
-#box-mais-prod-1 img{
+#box-mais-prod img{
 	float:left;
     margin:0 20px 10px 0;	
 	}
 
-#box-mais-prod-1 b{
+#box-mais-prod b{
 	font-weight:bold;	
 	}
 
-.btn-mais-prod-1{
+.btn-mais-prod{
 	position:absolute;
 	display:block;
 	width:300px;
 	height:50px;
-	background-image:url('../images/btn-leia-mais-prod-1.jpg');
+	
 	background-position:center bottom;
 	bottom:5px;
 	}
 
-.btn-mais-prod-1:hover{
-	display:block;
-	width:300px;
-	height:50px;
-	background-image:url('../images/btn-leia-mais-prod-1.jpg');
+.btn-mais-prod:hover{
 	background-position:center top;	
 	}
+	
+#btn-products-on{
+	width:950px;
+	height:50px;
+	margin-top:21px;
+	}
+
+#btn-products-on a{
+	float:right;
+	margin-top:13px;
+	margin-right:10px;
+	}
+
+#btn-products-off{
+	width:950px;
+	height:50px;
+	
+	}
+
+.box-products-index-azul
+{
+	background-image:url('/images/bg_prod-1.png');
+}
+
+.box-products-index-marrom
+{
+	background-image:url('/images/bg_prod-2.png');
+}
+
+.box-products-index-verde
+{
+	background-image:url('/images/bg_prod-3.png');
+}
+
+
+	
+.btn-mais-prod-azul
+{
+	background-image:url('/images/btn-leia-mais-prod-1.jpg');
+}	
+
+.btn-mais-prod-marrom
+{
+	background-image:url('/images/btn-leia-mais-prod-2.jpg');
+}
+
+.btn-mais-prod-verde
+{
+	background-image:url('/images/btn-leia-mais-prod-3.jpg');
+}
+
+
+
+.btn-products-on-azul
+{
+	background-color:#5985ad;
+}
+
+.btn-products-on-marrom
+{
+	background-color:#7d5a58;
+}
+
+.btn-products-on-verde
+{
+	background-color:#546da1;
+}
+	
+/*----------------*/
+
 
 .btn-mais-prod-2{
 	position:absolute;
@@ -297,24 +365,7 @@
 	margin-top:-125px;
 	}
 
-#btn-products-1-on{
-	width:950px;
-	height:50px;
-	background-color:#5985ad;
-	margin-top:21px;
-	}
 
-#btn-products-1-on a{
-	float:right;
-	margin-top:13px;
-	margin-right:10px;
-	}
-
-#btn-products-1-off{
-	width:950px;
-	height:50px;
-	background-color:#5985ad;
-	}
 
 #btn-products-2-on{
 	width:950px;

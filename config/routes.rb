@@ -3,9 +3,6 @@ KwJesusdemari::Application.routes.draw do
 
   get "group/index"
   get "home/index"
-  get "sustainability/index"
-  get "products/index"
-  get "products/show"
   
   resources :news
   resources :user_sessions
@@ -13,6 +10,9 @@ KwJesusdemari::Application.routes.draw do
   resources :password_resets
   resources :atualizar
   resources :contacts
+  resources :products
+  resources :sustainability
+  
   #Inicio do namespace Admin
   namespace(:admin){
     resources :categories do
