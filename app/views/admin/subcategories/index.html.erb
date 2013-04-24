@@ -1,4 +1,4 @@
-<% title "Admin/Subcategories" %>
+<% title "Subcategorias" %>
 
 <table>
   <tr>
@@ -9,11 +9,11 @@
     <tr>
       <td><%= subcategory.category_id %></td>
       <td><%= subcategory.title %></td>
-      <td><%= link_to "Show", [:admin, subcategory] %></td>
-      <td><%= link_to "Edit", edit_admin_subcategory_path(subcategory) %></td>
-      <td><%= link_to "Destroy", [:admin, subcategory], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Show", admin_category_subcategory_path(@category,subcategory) %></td>
+      <td><%= link_to "Edit", edit_admin_category_subcategory_path(@category,subcategory) %></td>
+      <td><%= link_to "Destroy", admin_category_subcategory_path(@category,subcategory), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Admin/Subcategory", new_admin_subcategory_path %></p>
+<p><%= link_to "New Admin/Subcategory", new_admin_category_subcategory_path(@category) %></p>

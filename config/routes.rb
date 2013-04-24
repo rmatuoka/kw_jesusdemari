@@ -19,9 +19,7 @@ KwJesusdemari::Application.routes.draw do
   #Inicio do namespace Admin
   namespace(:admin){
     resources (:categories){
-      resources (:subcategories){
-        resources :products
-      }
+    resources :subcategories
     }
     resources :notices
     resources :static_contents
