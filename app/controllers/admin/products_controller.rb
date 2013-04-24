@@ -3,28 +3,28 @@ layout "inadmin"
 
 before_filter :load_subcategorie
   def index
-    @products = Product.all
+    @products = @subcategory.products.all
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = @subcategory.products.find(params[:id])
   end
 
   def new
-    @product = Product.new
+    @product = @subcategory.products.new(:active => true)
   end
 
   def create
-    @product = Product.new(params[:product])
+    @product = @subcategory.products.new(params[:product])
     if @product.save
-      redirect_to [:admin, @product], :notice => "Successfully created product."
+      redirect_to admin_category_subcategory_product_path(@category,@subcategory,@product), :notice => "Successfully created product."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @product = Product.find(params[:id])
+    @product = @subcategory.products.find(params[:id])
   end
 
   def update
@@ -37,8 +37,13 @@ before_filter :load_subcategorie
   end
 
   def destroy
-    @product = Product.find(params[:id])
+    @product = @subcategory.products.find(params[:id])
     @product.destroy
-    redirect_to admin_products_url, :notice => "Successfully destroyed product."
+    redirect_to admin_category_subcategory_products_path(@category,@subcategory), :notice => "Successfully destroyed product."
+  end
+  
+  def load_subcategorie
+  @category = Category.find(params[:category_id])
+	@subcategory = Subcategory.find(params[:subcategory_id])
   end
 end

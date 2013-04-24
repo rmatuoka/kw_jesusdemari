@@ -5,6 +5,10 @@
   <%= @category.title %>
 </p>
 <p>
+  <strong>Imagem:</strong><br/>
+  <%= image_tag(@category.logo.url(:thumb)) %>
+</p>
+<p>
   <strong>Description:</strong>
   <%= @category.description %>
 </p>

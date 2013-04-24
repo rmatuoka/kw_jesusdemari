@@ -1,8 +1,5 @@
 KwJesusdemari::Application.routes.draw do
 
-  #get "contacts/new"
-
-  #get "contacts/show"
 
   get "group/index"
   get "home/index"
@@ -18,9 +15,11 @@ KwJesusdemari::Application.routes.draw do
   resources :contacts
   #Inicio do namespace Admin
   namespace(:admin){
-    resources (:categories){
-    resources :subcategories
-    }
+    resources :categories do
+      resources :subcategories do
+        resources :products
+      end
+    end
     resources :notices
     resources :static_contents
     resources(:sections){

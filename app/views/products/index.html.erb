@@ -63,13 +63,13 @@ jQuery(document).ready(function(){
 						<h2>Conheça nossa linha</h2>
 						<p>A JDM Artefatos de Concreto conta com uma completa linha de produtos voltados ha solucionar seus problemas.</p>
 						<div id='itens-prod'>
-            <% @subcategories.each do |subcategorie|%>
-							<a href='javascript:void(0)' id='item-prod-1' class='item-prod'><%= subcategorie.title %></a><br>
+            <% @artefatos.each do |artefato|%>
+							<a href='javascript:void(0)' id='item-prod-1' class='item-prod'><%= artefato.title%></a><br>
 							<div id='int-list-prod' class='hide'>
 								<ul>
-									<li><a href='javascript:void(0)'>Anéis de Concreto Liso</a></li>
-									<li><a href='javascript:void(0)'>Perfurados</a></li>
-									<li><a href='javascript:void(0)'>Liso SANASA e SABESP</a></li>
+                  <% @artefatos_produtos.each do |produto|%>
+									<li><a href='javascript:void(0)'><%= produto.summary%></a></li>
+                  <% end %>
 								</ul>
 							</div>
             <% end %>

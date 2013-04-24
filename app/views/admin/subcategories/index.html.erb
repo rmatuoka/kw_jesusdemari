@@ -9,11 +9,12 @@
     <tr>
       <td><%= subcategory.category_id %></td>
       <td><%= subcategory.title %></td>
-      <td><%= link_to "Show", admin_category_subcategory_path(@category,subcategory) %></td>
-      <td><%= link_to "Edit", edit_admin_category_subcategory_path(@category,subcategory) %></td>
-      <td><%= link_to "Destroy", admin_category_subcategory_path(@category,subcategory), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Show", admin_category_subcategory_path(@category,subcategory), :class => "secondary small button" %></td>
+      <td><%= link_to "Edit", edit_admin_category_subcategory_path(@category,subcategory), :class => "secondary small button" %></td>
+      <td><%= link_to "+ Produto", admin_category_subcategory_products_path(@category,subcategory), :class => "secondary small button" %></td>
+      <td><%= link_to "Destroy", admin_category_subcategory_path(@category,subcategory), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Admin/Subcategory", new_admin_category_subcategory_path(@category) %></p>
+<p><%= link_to "+ Subcategoria", new_admin_category_subcategory_path(@category), :class => "button" %></p>
