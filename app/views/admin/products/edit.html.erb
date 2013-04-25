@@ -3,6 +3,6 @@
 <%= render 'form' %>
 
 <p>
-  <%= link_to "Ver", [:admin, @product], :class => "secondary small button" %> |
-  <%= link_to "Ver Todos", admin_products_path, :class => "secondary small button" %>
+  <%= link_to "Ver", admin_category_subcategory_product_path(@category,@subcategory,@product), :class => "secondary small button" %> |
+  <%= link_to "Ver Todos", admin_category_subcategory_products_path(@category,@subcategory), :class => "secondary small button" %>
 </p>

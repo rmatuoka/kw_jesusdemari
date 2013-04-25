@@ -28,9 +28,9 @@ before_filter :load_category
   end
 
   def update
-    @subcategory = Subcategory.find(params[:id])
+    @subcategory = @category.subcategories.find(params[:id])
     if @subcategory.update_attributes(params[:subcategory])
-      redirect_to [:admin, @subcategory], :notice  => "Successfully updated subcategory."
+      redirect_to admin_category_subcategory_path(@category,@subcategory), :notice  => "Successfully updated subcategory."
     else
       render :action => 'edit'
     end

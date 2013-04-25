@@ -28,9 +28,9 @@ before_filter :load_subcategorie
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product = @subcategory.products.find(params[:id])
     if @product.update_attributes(params[:product])
-      redirect_to [:admin, @product], :notice  => "Successfully updated product."
+      redirect_to admin_category_subcategory_product_path(@category,@subcategory,@product), :notice  => "Successfully updated product."
     else
       render :action => 'edit'
     end

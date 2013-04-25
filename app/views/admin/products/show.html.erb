@@ -16,5 +16,5 @@
 <p>
   <%= link_to "Editar", edit_admin_category_subcategory_product_path(@category,@subcategory,@product), :class => "secondary small button" %> |
   <%= link_to "Deletar", admin_category_subcategory_product_path(@category,@subcategory,@product), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "Ver Todos", admin_category_subcategory_products_path(@subcategory,@category), :class => "secondary small button" %>
+  <%= link_to "Ver Todos", admin_category_subcategory_products_path(@category,@subcategory), :class => "secondary small button" %>
 </p>
