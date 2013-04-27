@@ -1,8 +1,8 @@
-<% title "Edit Admin/Subcategory" %>
+<% title "Edit Subcategoria" %>
 
 <%= render 'form' %>
 
 <p>
-  <%= link_to "Show", admin_category_subcategory_path(@category,@subcategory) %> |
-  <%= link_to "View All", admin_category_subcategories_path(@category) %>
+  <%= link_to "Visualizar", admin_category_subcategory_path(@category,@subcategory), :class => "secondary small button" %> |
+  <%= link_to "Ver Todas", admin_category_subcategories_path(@category), :class => "secondary small button" %>
 </p>

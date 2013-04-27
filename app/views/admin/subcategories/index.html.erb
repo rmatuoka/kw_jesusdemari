@@ -1,18 +1,18 @@
 <% title "Subcategorias" %>
-
+<h1>Subcategorias</h1>
 <table>
   <tr>
-    <th>Category</th>
-    <th>Title</th>
+    <th>Categoria</th>
+    <th>Título</th>
   </tr>
   <% for subcategory in @subcategories %>
     <tr>
       <td><%= subcategory.category_id %></td>
       <td><%= subcategory.title %></td>
-      <td><%= link_to "Show", admin_category_subcategory_path(@category,subcategory), :class => "secondary small button" %></td>
-      <td><%= link_to "Edit", edit_admin_category_subcategory_path(@category,subcategory), :class => "secondary small button" %></td>
-      <td><%= link_to "+ Produto", admin_category_subcategory_products_path(@category,subcategory), :class => "secondary small button" %></td>
-      <td><%= link_to "Destroy", admin_category_subcategory_path(@category,subcategory), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Visualizar", admin_category_subcategory_path(@category,subcategory), :class => "secondary small button" %></td>
+      <td><%= link_to "Editar", edit_admin_category_subcategory_path(@category,subcategory), :class => "secondary small button" %></td>
+      <td><%= link_to "Ver Produtos", admin_category_subcategory_products_path(@category,subcategory), :class => "secondary small button" %></td>
+      <td><%= link_to "Deletar", admin_category_subcategory_path(@category,subcategory), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

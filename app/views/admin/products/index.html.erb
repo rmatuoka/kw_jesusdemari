@@ -1,5 +1,5 @@
 <% title "Produtos" %>
-
+<h1>Produtos</h1>
 <table class="twelve columns">
   <tr>
     <th>Resumo</th>
@@ -13,9 +13,9 @@
       <td><%= product.link %></td>
       <td><%= product.published %></td>
       <td><%= product.active %></td>
-      <td><%= link_to "Show", admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button" %></td>
-      <td><%= link_to "Edit", edit_admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button" %></td>
-      <td><%= link_to "Destroy", admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Visualizar", admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button" %></td>
+      <td><%= link_to "Editar", edit_admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button" %></td>
+      <td><%= link_to "Deletar", admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

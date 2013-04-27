@@ -13,9 +13,9 @@
       <td><%= category.title %></td>
       <td><%= category.description %></td>
       <td><%= link_to "Visualizar", [:admin, category], :class => "secondary small button" %></td>
-      <td><%= link_to "Edit", edit_admin_category_path(category), :class => "secondary small button" %></td>
+      <td><%= link_to "Editar", edit_admin_category_path(category), :class => "secondary small button" %></td>
       <td><%= link_to "Subcategoria", admin_category_subcategories_path(category), :class => "secondary small button" %></td>
-      <td><%= link_to "Destroy", [:admin, category], :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Deletar", [:admin, category], :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

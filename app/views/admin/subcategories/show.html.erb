@@ -1,20 +1,20 @@
-<% title "Admin/Subcategory" %>
+<% title "Subcategoria" %>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Categoria:</strong>
   <%= @subcategory.category_id %>
 </p>
 <p>
-  <strong>Title:</strong>
+  <strong>Título:</strong>
   <%= @subcategory.title %>
 </p>
 <p>
-  <strong>Description:</strong>
+  <strong>Descrição:</strong>
   <%= @subcategory.description %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_admin_category_subcategory_path(@category,@subcategory) %> |
-  <%= link_to "Destroy", admin_category_subcategory_path(@category,@subcategory), :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_category_subcategories_path(@category) %>
+  <%= link_to "Editar", edit_admin_category_subcategory_path(@category,@subcategory), :class => "secondary small button" %> |
+  <%= link_to "Deletar", admin_category_subcategory_path(@category,@subcategory), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Ver Todas", admin_category_subcategories_path(@category), :class => "secondary small button" %>
 </p>

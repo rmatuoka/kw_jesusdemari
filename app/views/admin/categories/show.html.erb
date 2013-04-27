@@ -1,7 +1,7 @@
-<% title "Admin/Category" %>
+<% title "Categorias" %>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Título:</strong>
   <%= @category.title %>
 </p>
 <p>
@@ -9,15 +9,15 @@
   <%= image_tag(@category.logo.url(:thumb)) %>
 </p>
 <p>
-  <strong>Description:</strong>
+  <strong>Descrição:</strong>
   <%= @category.description %>
 </p>
 <p>
-  <strong>Class:</strong>
+  <strong>Classe:</strong>
   <%= @category.css %>
 </p>
 <p>
-  <%= link_to "Edit", edit_admin_category_path(@category) %> |
-  <%= link_to "Destroy", [:admin, @category], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_categories_path %>
+  <%= link_to "Editar", edit_admin_category_path(@category), :class => "secondary small button" %> |
+  <%= link_to "Deletar", [:admin, @category], :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Ver Todas", admin_categories_path, :class => "secondary small button" %>
 </p>

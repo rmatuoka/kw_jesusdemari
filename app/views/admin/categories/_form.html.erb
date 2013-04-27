@@ -1,15 +1,15 @@
 <%= form_for ([:admin, @category], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :title, "Título" %><br />
     <%= f.text_field :title, :placeholder => "Título", :class => "twelve columns" %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, "Descrição" %><br />
     <%= f.text_area :description, :placeholder => "Descrição", :class => "twelve columns" %>
   </p>
   <p>
-    <%= f.label :css %><br />
+    <%= f.label :css, "Classe" %><br />
     <%= f.text_field :css, :placeholder => "Class", :class => "twelve columns" %>
   </p>
   <p>

@@ -1,11 +1,11 @@
 <%= form_for ([:admin,@category,@subcategory,@product], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :summary %><br />
+    <%= f.label :summary, "Título" %><br />
     <%= f.text_field :summary, :placeholder => "Resumo", :class => "twelve columns"  %>
   </p>
   <p>
-    <%= f.label :body %><br />
+    <%= f.label :body, "Descrição" %><br />
     <%= f.text_area :body, :placeholder => "Descrição", :class => "twelve columns"  %>
   </p>
   <p>
@@ -20,5 +20,5 @@
     <%= f.label :Ativo %><br />
     <%= f.check_box :active %>
   </p>
-  <p><%= f.submit :class => "button" %></p>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
 <% end %>
