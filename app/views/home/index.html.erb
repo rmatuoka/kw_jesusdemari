@@ -1,77 +1,69 @@
 <%content_for :head do%>
-  <script>
-  jQuery(document).ready(function(){ 
-     $('#slide-home')
-       .before('<div id="nav">')
-       .cycle({
-        fx:     'scrollRight', 
-        speed:  'fast', 
-        timeout: 0, 
-        pager:  '#nav'
-    });
-  });
+  <%= stylesheet_link_tag "home"%>
+<% end %>
 
-</script>
-<%end%>
-
-			<div id='slide-home'>
-        <% if @highlights.count > 0 %>
-        
-        <% @highlights.each do |featured| %>
-        
-        <% 
-        @destaques = Banner.all(:conditions => ['position=1 and section_id=?',featured])
-        @destaques.each do |banner| 
-        %>
-
-
-        <%= link_to image_tag(banner.image.url("rotative")),banner.link,:target => banner.target%>
-        
-        <% end %>
-        
-        <% end %>
-        <% end %>
-			</div>
-			<div id='article-content'>
-				<div id='article-left'>
-					<div id='article-left-title'>
-						<h1>Lorem Ipsum dolor site amet</h1>
-					</div>
-          
-          <%@news.each do |n|%>
-					<div id='article-left-box'>
-						<div id='article-left-box-img'>
-							<%= image_tag(n.image.url(:home), :alt=>n.title, :title=>n.title) %>
-						</div>
-						<div id='article-left-box-info'>
-							<h2><%=n.title%></h2>
-							<p><%=n.summary%></p>
-							<%= link_to image_tag('btn_mais.png', :height=>'8', :width=>'56', :alt=>n.title, :title=>n.title), news_path(n.id) %>
-						</div>
-					</div>
-          <%end%>
-          
-          
-					
-					
-				</div>
-				<div id='article-right'>
-					<div id='article-right-title'>
-						<h1>Parceiro</h1>
-					</div>
-          <% @highlights.each do |p| %>
-          
-          <% 
-          @destaques = Banner.all(:conditions => ['position=2 and section_id=?',p])
-          @destaques.each do |parceiros|
-          %>
-          
-					<div id='article-right-box'>
-						<%= link_to image_tag(parceiros.image.url("partner")),parceiros.link, :target => parceiros.target, :alt=>parceiros.title, :title=>parceiros.title %>
-					</div>
-          <% end %>
-          <% end %>
-				</div>
-				<div class='clear'></div>
-			</div>
-			
+<div class="row">
+    <div class="small-12 large-12 columns highlights">
+        <div class="highlights_box">
+            <div class="high_text_1">Compromisso e Qualidade</div>
+            <div class="high_text_2">
+                Artefatos de concreto, pré-fabricados e pavimentação.
+            </div>
+        </div>
+    </div>
+</div>    
+<div class="row">
+	<div class="small-12 columns content_mobile">
+      <div class="info_box">
+            <div class="rounded_box">
+            	<div class="img_rbx"><%=image_tag("img_tel.png")%></div><div class="text_rbx">11 4416 7007</div>
+            </div>
+            <div class="rounded_box">
+            	<div class="img_rbx"><%=image_tag("img_world.png")%></div>
+                <div class="text_rbx_2">
+                    R. Antonio da Cunha Leite, 2455<br />
+                    Bairro Portão - Atibaia - SP <br />
+                    CEP 12.948-110 
+                </div>
+            </div>
+            <div class="rounded_box">
+            	<div class="img_rbx"><%=image_tag("img_letter.png")%></div>
+                <div class="text_rbx_2">
+                    sac@jesusdemari.com.br<br />
+                    atendimento@jesusdemari.com.br 
+                </div>               
+            </div>                        
+        </div>    
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns bg_desk_detail_line"></div>
+</div>
+<div class="row">
+	<div class="large-12 columns content_desk">
+        <div class="large-4 columns box_content_desk">
+        	<div class="img_cont_desk">
+            	<%=image_tag("img_artefatos.png")%>
+            </div>
+       	  <div class="txt_cont_desk">
+				A <span class="txt_cont_desk_bold">JDM Artefatos de Concreto</span> é uma empresa atuante na área de artefatos de concreto com foco em estruturas de concreto para saneamento básico, com foco em ETE (estações de tratamento de esgoto), Lajes de Concreto,  Anéis de Concreto, Caixas de Concreto e Mourões de Concreto.            
+            </div>
+        </div>
+        <div class="large-4 columns box_content_desk">
+        	<div class="img_cont_desk">
+            	<%=image_tag("img_prefabricados.png")%>
+            </div>        
+        	<div class="txt_cont_desk">
+            	A <span class="txt_cont_desk_bold">JDM Pré Fabricados</span> é uma empresa em artefatos de concreto especializada no fornecimento de peças e projetos para grandes estruturas de concreto pré-fabricadas fornecemos Tubos de Concreto, e Aduelas Quadradas de Concreto alem da montagem de Galpões Pré-Fabricados e Projetos Especiais.
+            </div>
+        </div>
+        <div class="large-4 columns box_content_desk">
+        	<div class="img_cont_desk">
+            	<%=image_tag("img_pavimentacao.png")%>
+            </div>           
+        	<div class="txt_cont_desk">
+            	A <span class="txt_cont_desk_bold">JDM Pavimentação</span> é uma empresa atuante na área de pavimentação em concreto, fornecemos Pisos de Concreto, Guias de Concreto, Bate Rodas de Concreto, Canaletas de Concreto e Prismas de Concreto.
+            </div>
+        </div>         
+    </div>
+</div>

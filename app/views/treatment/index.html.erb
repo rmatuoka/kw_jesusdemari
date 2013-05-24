@@ -1,0 +1,58 @@
+<%content_for :head do%>
+  <%= stylesheet_link_tag "atendimento"%>
+<% end %>
+<div class="row">
+	<div class="small-12 columns content_mobile">
+      <div class="atendimento_box">
+      	<span class="ab_title">Telefone</span><br /> 
+        <p class="ab_text">11 4416 7007</p>
+        <span class="ab_title">Endereço</span><br /> 
+        <p class="ab_text">
+            Rua Antonio da Cunha Leite<br /> 
+            Nº 2455<br /> 
+            Bairro Portão<br /> 
+            Atibaia - SP<br /> 
+            CEP 12.948-110         
+        </p>
+        <span class="ab_title">E-mail</span><br /> 
+        <p class="ab_text">
+            sac@jesusdemari.com.br<br />
+            atendimento@jesusdemari.com.br     
+        </p> 
+        <span class="ab_title">2ª Via do Boleto</span><br /> 
+        <p class="ab_text">
+            <span class="ab_text_red">Envie o número da Nota Fiscal para:</span>
+            financeiro@jesusdemari.com.br   
+        </p>                 
+      </div>    
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns title_field">
+    	<h1 class="title_text">Atendimento</h1>
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns content_desk">
+        <div class="large-6 columns box_content_desk">
+        	<div class="box_atendimento_cont">
+              <%=image_tag ("img_atend_letter.jpg"), :class => "img_atend_align"%>
+                <p class="atend_text">2ª Via do Boleto</p><br />
+                <p  class="atend_text_2">
+                	Envie o número da Nota Fiscal para:
+					financeiro@jesusdemari.com.br
+                </p >
+            </div>
+        </div>
+        <div class="large-6 columns box_content_desk">
+        	<div class="box_atendimento_cont">
+              <%=image_tag ("img_atend_symbol.jpg"), :class => "img_atend_align"%>
+                <p class="atend_text">Atendimento Online</p><br />
+                <p  class="atend_text_2">
+					<a href="#">Clique aqui</a> e inicie um chat com nossa<br /> 
+					atendente!
+                </p >
+            </div>
+        </div>
+    </div>
+</div>

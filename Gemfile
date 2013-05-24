@@ -14,6 +14,7 @@ gem 'jquery-rails', '>= 1.0.12'
 gem "browser"
 gem 'paperclip', '2.3.8'
 gem 'haml', '4.0.1'
+#gem 'zurb-foundation', '~> 4.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'

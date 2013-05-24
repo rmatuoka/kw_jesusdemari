@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-image:url(/images/background_desktop_internal.jpg);
+}
+.row{
+	width:100% !important;
+}
+.atendimento_box{
+	font-family: 'Oxygen', sans-serif;
+	padding-left:39px;
+	padding-top:81px;
+}
+ .ab_title
+ {
+	 font-size:12px;
+	 color:#00918f;
+	 font-weight:normal;
+ }
+ .ab_text
+ {
+	 font-size:14px;
+	 color:#4dc2c5;
+	 font-weight:bold;
+ }
+ .ab_text_red
+ {
+	 font-size:12px;
+	 color:#972c31;
+	 font-weight:bold;
+ } 
+ .box_atendimento_cont{
+	margin-top:54px;
+	margin-bottom:101px;
+	position:relative;
+	max-width:518px;
+	width:auto;
+	height:144px;
+	-moz-box-shadow: 4px 7px #b2e8e7;
+	-webkit-box-shadow: 4px 7px #b2e8e7;
+	box-shadow: 4px 7px #b2e8e7;
+	background:#00d5d2;	 
+	font-family: 'Oxygen', sans-serif;
+	right:0px;
+ }
+ 	.img_atend_align{
+		position:absolute;
+		left:0px;
+	}
+	 .atend_text
+	 {
+		 position:absolute;
+		  line-height:normal;
+		  top:37px;
+		 left:200px;
+		 font-size:21px;
+		 color:#d9fdfd;
+		 font-weight:bold;
+		 text-align:left;
+	 }
+	 .atend_text_2
+	 {
+		 position:absolute;
+		 line-height:normal;
+		 top:62px;
+		 left:200px;
+		 font-size:16px;
+		 color:#d9fdfd;
+		 font-weight:bold;
+		 text-align:left;
+	 }		 	

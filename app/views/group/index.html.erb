@@ -1,72 +1,101 @@
 <%content_for :head do%>
-<script>
-jQuery(document).ready(function(){ 
-	 $('#slide-group').cycle({
-			fx:     'scrollHorz', 
-    		speed:  'slow', 
-    		timeout: 0, 
-    		next:   '#group-next', 
-    		prev:   '#group-prev'
-	});
-	
-	$('#grupo').css('background-position','bottom');
-});
-</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=228638123874618";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-  {lang: 'pt-BR'}
-</script>
-<%end%>
-
-			<div id='article-content'>
-				<div id='top-group'>
-					<h1>A Empresa</h1>
-				</div>
-				<div class='clear'></div>
-				<div id='group-article'>
-					<h1>Histórico</h1>
-					<p>Jesus de Mari Indústria de Pré Moldados, fundada a mais de 30 anos, localizada no município de Atibaia-SP, é uma empresa fabricante de produtos e prestadora de serviços que consagrou sua marca e consolidou seu nome no ramo de Pré moldados.<br><br>
-	Com o objetivo de atender todas as necessidades do ramo de Pré moldados o Grupo Jesus De Mari se aprimora e aumenta a sua capacidade de produção dia após dia, para que toda vez que necessitarem de nossos produtos estaremos prontos para servi-los com todo profissionalismo e respeito que sua empresa merece.</p>
-					<h1>Compromisso</h1>
-					<p>	O Grupo Jesus de Mari possui um firme compromisso com a qualidade dos produtos que levam sua marca e para isso investe constantemente em tecnologia, aprimoramento de processos e preparação da equipe.<br><br>	
-	Além de contar com equipamentos modernos para a fabricação dos produtos, o Grupo Jesus de Mari possui laboratório próprio para realizar ensaios de qualidade em todos os produtos oferecidos ao mercado, garantindo e reafirmando, assim, a confiabilidade da marca.</p>
-					<h1>Valores</h1>
-					<h2>Qualidade</h2>
-					<p>Qualidade, alto padrão e confiabilidade é com a Jesus de Mari, pois tem mais de 30 anos de experiência e profissionalismo.
-A nossa linha de produção é uma família que remonta a mais de 30 anos de história, composta por mais de 400 funcionários que trabalham com total segurança em uma área de 91.000m² de excelente infra estrutura. Isso faz da nossa linha de produção eficiente e rápida.
-Contamos com um completo estoque e com uma frota preparada e apta a agilizar o processo de entrega, em qualquer quantidade em todo território em nível nacional.</p>
-          <h2>Garantia</h2>
-					<p>O Grupo Jesus de Mari atende as empresas dos mais diversos segmentos do mercado, tais como: Prefeituras, construtoras, lojas de materiais de construção, prestadores de serviços em geral e outros. Os clientes do Grupo Jesus de Mari ganham em: rapidez, conforto e segurança. Não é por acaso que o Grupo Jesus de Mari consolidou sua marca e hoje é uma das lideres no mercado. A matéria prima utilizada em nossos produtos são de excelente qualidade, proporcionando à confiabilidade em nossa linha de fabricação, que seguem as todas as normas técnicas.</p>
-				</div>
-				<div id='slide-group'>
-          <% if @group_rotative.count > 0 %>
-          <% @group_rotative.each do |group| %>
-          <% 
-          @banner = Banner.all(:conditions => ['position=1 and section_id=?',group])
-          @banner.each do |banner| 
-          %>
-
-
-          <%= link_to image_tag(banner.image.url("group")),banner.link,:target => banner.target%>
-        
-        <% end %>
-        
-        <% end %>
-        <% end %>
-				</div>
-				<div id='group-next'>
-				
-				</div>
-				<div id='group-prev'>
-				
-				</div>
-			</div>
-			
+<%= stylesheet_link_tag "empresa"%>
+<% end %>
+<div class="row">
+	<div class="small-12 columns content_mobile">
+    <%=image_tag ("img_grupo_jesus_de_mari_mobile.jpg")%>
+      <div class="empresa_box">
+      	<span class="empresa_title">Histórico</span><br /><br /> 
+        <p class="empresa_text">
+			Jesus de Mari Indústria de Pré Moldados,  fundada a mais de 30 anos, localizada no município de Atibaia-SP, é uma empresa fabricante de produtos e prestadora de serviços que consagrou sua marca e consolidou seu nome no ramo de Pré moldados.        
+        </p>
+       	<span class="empresa_title">Compromisso</span><br /><br />
+        <p class="empresa_text">
+			O Grupo Jesus de Mari possui um firme compromisso com a qualidade dos produtos que levam sua marca e para isso investe constantemente em tecnologia, aprimoramento de processos e preparação da equipe.        
+       	</p>  
+        <span class="empresa_title">Qualidade</span><br /><br />
+        <p class="empresa_text">
+            Qualidade, alto padrão e confiabilidade é com a Jesus de Mari, pois tem mais de 30 anos de experiência e profissionalismo.<br />
+            
+            A nossa linha de produção é uma família que remonta a mais de 30 anos de história, composta por mais de 400 funcionários que trabalham com total segurança em uma área de 91.000m² de excelente infra estrutura. Isso faz da nossa linha de produção eficiente e rápida.<br />
+            
+            Contamos com um completo estoque e com uma frota preparada e apta a agilizar o processo de entrega, em qualquer quantidade em todo território em nível nacional.        
+        </p>
+        <span class="empresa_title">Garantia</span><br /><br />
+        <p class="empresa_text">
+            O Grupo Jesus de Mari atende as empresas dos mais diversos segmentos do mercado, tais como: Prefeituras, construtoras, lojas de materiais de construção, prestadores de serviços em geral e outros.<br />
+            
+            Os clientes do Grupo Jesus de Mari ganham em: rapidez, conforto e segurança.<br />
+            
+            Não é por acaso que o Grupo Jesus de Mari consolidou sua marca e hoje é uma das lideres no mercado.<br />
+            
+            A matéria prima utilizada em nossos produtos são de excelente qualidade, proporcionando à confiabilidade em nossa linha de fabricação, que seguem as todas as normas técnicas.        	
+        </p>
+      </div>    
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns title_field">
+    	<h1 class="title_text">Grupo Jesus de Mari</h1>
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns content_desk">
+    	<%=link_to (image_tag("img_grupo_jesus_de_mari.jpg", :width => "100%"))%>
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns bg_desk_detail_line_2"></div>
+</div>
+<div class="row">
+	<div class="large-12 columns content_desk">
+        <div class="large-6 columns box_content_desk">
+            <div class="empresa_box_desk">
+                <span class="empresa_title_desk">Compromisso</span><br /><br />
+                <p class="empresa_text_desk">
+					A Jesus de Mari Indústria de Pré Moldados, fundada a mais de 30 anos, localizada no município de Atibaia-SP, é uma empresa fabricante de produtos e prestadora de serviços que consagrou sua marca e consolidou seu nome no ramo de Pré moldados.<br /><br />
+                    Com o objetivo de atender todas as necessidades do ramo de Pré moldados o Grupo Jesus De Mari se aprimora e aumenta a sua capacidade de produção dia após dia, para que toda vez que necessitarem de nossos produtos estaremos prontos para servi-los com todo profissionalismo e respeito que sua empresa merece.<br />
+                </p>
+            </div>  
+        </div>
+        <div class="large-6 columns box_content_desk">
+            <div class="empresa_box_desk">
+                <span class="empresa_title_desk">Histórico</span><br /><br /> 
+                <p class="empresa_text_desk">
+                    O Grupo Jesus de Mari possui um firme compromisso com a qualidade dos produtos que levam sua marca e para isso investe constantemente em tecnologia, aprimoramento de processos e preparação da equipe.<br /><br />
+                    Além de contar com equipamentos modernos para a fabricação dos produtos, o Grupo Jesus de Mari possui laboratório próprio para realizar ensaios de qualidade em todos os produtos oferecidos ao mercado, garantindo e reafirmando, assim, a confiabilidade da marca.
+                </p> 
+            </div>       	
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="large-12 columns content_desk">
+        <div class="large-6 columns box_content_desk">
+            <div class="empresa_box_desk">
+                <span class="empresa_title_desk">Qualidade</span><br /><br />
+                <p class="empresa_text_desk">
+                    Qualidade, alto padrão e confiabilidade é com a Jesus de Mari, pois tem mais de 30 anos de experiência e profissionalismo.<br /><br />
+                    
+                    A nossa linha de produção é uma família que remonta a mais de 30 anos de história, composta por mais de 400 funcionários que trabalham com total segurança em uma área de 91.000m² de excelente infra estrutura. Isso faz da nossa linha de produção eficiente e rápida.<br /><br />
+                    
+                    Contamos com um completo estoque e com uma frota preparada e apta a agilizar o processo de entrega, em qualquer quantidade em todo território em nível nacional.        
+                </p>
+            </div>
+        </div>
+        <div class="large-6 columns box_content_desk">
+        	<div class="empresa_box_desk">
+                <span class="empresa_title_desk">Garantia</span><br /><br />
+                <p class="empresa_text_desk">
+                    O Grupo Jesus de Mari atende as empresas dos mais diversos segmentos do mercado, tais como: Prefeituras, construtoras, lojas de materiais de construção, prestadores de serviços em geral e outros.<br /><br />
+                    
+                    Os clientes do Grupo Jesus de Mari ganham em: rapidez, conforto e segurança.<br /><br />
+                    
+                    Não é por acaso que o Grupo Jesus de Mari consolidou sua marca e hoje é uma das lideres no mercado.<br /><br />
+                    
+                    A matéria prima utilizada em nossos produtos são de excelente qualidade, proporcionando à confiabilidade em nossa linha de fabricação, que seguem as todas as normas técnicas.        	
+                </p> 
+            </div>      	
+        </div>
+    </div>
+</div>

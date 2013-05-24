@@ -1,6 +1,8 @@
 KwJesusdemari::Application.routes.draw do
 
 
+  get "treatment/index"
+
   get "group/index"
   get "home/index"
   
