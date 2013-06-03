@@ -1,27 +1,45 @@
 <div class="row">
     <div class="small-12 large-12 columns header">
-        <div class="left logo"><%=link_to (image_tag ("logo.png")), root_path%></div>
+        <div class="left logo"><img src="/images/logo.png"></div>
         <div class="nav_menu_bt show-for-small">
-            <%=link_to (image_tag("bt_menu_nav.png"), :id => "pull", :style => "display:block")%>
+            <a href="#" style="display:block;" id="pull"><img src="/images/bt_menu_nav.png"></a>
         </div>      
         <ul class="menu">
-            <li><%= link_to "Sobre o grupo", group_index_path%></li>
-            <li><%= link_to "Produtos", products_path%></li>
-            <li><%= link_to "Sustentabilidade", sustainability_index_path%></li>
+            <li><%=link_to "Sobre o grupo", group_index_path%></li>
+            <li><%=link_to "Produtos", products_path%></li>
+            <li><%=link_to "Sustentabilidade", sustainability_index_path%></li>
             <li><%=link_to "Atendimento", treatment_index_path%></li>
-            <li><li><%=link_to "Orçamentos", budgets_path%></li></li>
+            <li><%=link_to "Orçamento", budgets_path%></li>
         </ul>
-        <%=link_to (image_tag ("bt_chat.png"), :class => "bt_chat")%>
+        <a href="#"><img src="/images/bt_chat.png" class="bt_chat"></a> 
     </div>
 </div>
 <nav class="menu_mobile">                
-    <ul class="menu_mobile">
+    <ul class="menu_mobile" style="">
     <div>Categorias</div>
-        <li><a href="#">Artefatos de Concreto</a></li>
-        <li><a href="#">Pré-fabricados</a></li>
-        <li><a href="#">Pavimentação</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Web 2.0</a></li>
-        <li><a href="#">Tools</a></li>	
+        <li><a href="#" class="toggler">Artefatos de Concreto <img src="/images/img_arrow_right.png" class="align_arrow_menu"></a>
+            <div style="display: none;">
+                <ul>
+                    <li><a href="#" class="toggler">Anéis de Concreto</a></li>
+                    	<div>
+                            <ul>
+                                <li><a href="#"> Anéis de Concreto lisos</a></li>
+                                <li><a href="#">Anéis de Concreto Perfurados</a></li>
+                                <li><a href="#">Anéis de Concreto liso SANASA SABESP</a></li>
+                            </ul>
+                        </div>
+                    <li><a href="#">Mourões de Concreto</a></li>
+                    <li><a href="#">Poços</a></li>
+                    <li><a href="#">Fossa Séptica</a></li>
+                    <li><a href="#">Semideouros</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><%=link_to (("Pré-fabricados"), image_tag("img_arrow_right.png"))%></li>
+        <li><a href="#">Pré-fabricados<img src="/images/img_arrow_right.png" class="align_arrow_menu"></a></li>
+        <li><a href="#">Pavimentação<img src="/images/img_arrow_right.png" class="align_arrow_menu"></a></li>
+        <li><a href="#">Design<img src="/images/img_arrow_right.png" class="align_arrow_menu"></a></li>
+        <li><a href="#">Web 2.0<img src="/images/img_arrow_right.png" class="align_arrow_menu"></a></li>
+        <li><a href="#">Tools<img src="/images/img_arrow_right.png" class="align_arrow_menu"></a></li>	
     </ul>		
-</nav>  
+</nav>

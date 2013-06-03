@@ -54,7 +54,7 @@ body{
 		
 	}
 	.box_category_desk:hover .content_prefabricados{
-		background-image:url(./images/img_prefabricados_pb.png);	
+		background-image:url(/images/img_prefabricados_pb.png);	
 	}	
 .content_pavimentacao{
 	width:233px;
@@ -160,7 +160,7 @@ tbody{
 	color:#00c4c1;
 	font-family: 'Oxygen', sans-serif;
 	font-weight:normal;	
-	background-image:url(../img/bg_table_body.png);
+	background-image:url(/images/bg_table_body.png);
 	text-align:left;
 	border-collapse:separate !important;
 	padding-bottom: 1em !important;

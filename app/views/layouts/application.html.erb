@@ -57,11 +57,11 @@
   <script src="js/foundation/foundation.topbar.js"></script>
   
   -->
-  
   <script>
     $(document).foundation();
   </script>
-	<script>
+
+<script>
 		$(function() {
 			var pull 		= $('#pull');
 				menu 		= $('nav ul');
@@ -79,6 +79,22 @@
         		}
     		});
 		});
-	</script>  
+		
+		  $(".toggler").click(function(){
+			$(this).next().slideToggle("slide");
+			return false;
+		  }).next().hide();		
+</script>
+<script type="text/javascript">
+
+ 
+$('.item_category').click(function(event) {
+	$(".field_item_category").children(".item_category").removeClass('selected_item_category');
+	$(this).addClass('selected_item_category');
+   
+});
+
+ 
+</script>
 </body>
 </html>
