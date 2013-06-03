@@ -1,0 +1,50 @@
+<%content_for :head do%>
+<%=stylesheet_link_tag "orcamento"%>
+<%end%>
+<div class="row">
+  <div class="small-12 columns content_mobile">
+      <div class="orcamento_box">
+        <input type="text" placeholder="Nome" class="">
+        <input type="text" placeholder="Email" class="">
+        <select>
+          <option>teste</option>
+            <option>teste2  </option>
+        </select>
+        <textarea placeholder="Mensagem"></textarea>
+        <a href="#"><img src="/images/bt_enviar_orcamento_mob.png" class="bt_enviar_align_mob"></a> 
+      </div>    
+    </div>
+</div>
+<div class="row">
+  <div class="large-12 columns title_field">
+      <h1 class="title_text">Orçamento</h1>
+    </div>
+</div>
+<div class="row">
+  <div class="large-12 columns bg_desk_detail_line_2"></div>
+</div>
+<div class="row">
+  <div class="large-12 columns content_desk">
+        <div class="large-6 columns box_content_desk">
+           <p class="text_orçamento_desk">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet mattis tellus. Aliquam mattis elit placerat lectus aliquam commodo vulputate enim ultrices. Nullam sit amet magna massa, nec vehicula tellus. Phasellus dignissim tortor a mi laoreet tempus rutrum orci ultricies. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ac erat urna, vitae lobortis ipsum. Pellentesque rutrum vehicula nisl non condimentum. Sed ipsum neque, suscipit vel ullamcorper vitae, bibendum rutrum mauris. Curabitur mattis mauris mattis massa volutpat congue. Aenean nec dui eu ante fermentum gravida eu eget odio. Nam vitae nisi quis justo mattis imperdiet congue eu erat. Sed sodales sollicitudin malesuada. Sed ut malesuada enim.           
+           </p> 
+        </div>
+        <div class="large-6 columns box_content_desk">
+          <div class="orcamento_box_desk">
+          <%=form_for ([@budget]) do |f|%>
+	    <%=f.text_field :name, :placeholder => "Nome"%>
+	    <%=f.text_field :mail, :placeholder => "Email"%>
+	    <a href="#" data-dropdown="drop1" class="button dropdown select_drop">Dropdown Button</a><br>
+                <ul id="drop1" class="f-dropdown">
+                  <li><a href="#">This is a link</a></li>
+                  <li><a href="#">This is another</a></li>
+                  <li><a href="#">Yet another</a></li>
+                </ul>
+            <%=f.text_area :message, :placeholder => "Mensagem"%>
+            <%=image_submit_tag("bt_enviar_orcamento_desk.png", :class => "bt_enviar_align_desk")%>
+          <%end%>
+	    </div>        
+        </div>
+    </div>
+</div>

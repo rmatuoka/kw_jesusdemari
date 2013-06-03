@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-image:url(/images/background_desktop_internal.jpg);
+}
+.row{
+	width:100% !important;
+}
+.title_field{
+	height:184px;
+}
+.text_title{
+	font-family: 'Oxygen', sans-serif;
+	font-size:14px;
+	color:#00918f;
+	font-weight:normal;
+	max-width:632px;
+	width:auto;	
+	margin-top:42px;
+}
+
+
+
+.box_category_desk{
+	background:#c0fffc;
+}
+.box_category_desk:hover{
+	background:#e6fefd;
+}
+.content_artefatos{
+	width:233px;
+	height:236px;
+	background-image:url(/images/img_artefatos_blue.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+	.content_artefatos:hover{
+		background-image:url(/images/img_artefatos_bp.png);
+		
+	}
+.box_category_desk:hover .content_artefatos{
+		background-image:url(/images/img_artefatos_bp.png);
+		
+	}
+.content_prefabricados{
+	width:233px;
+	height:236px;
+	background-image:url(/images/img_prefabricados_blue.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+	.content_prefabricados:hover{
+		background-image:url(/images/img_prefabricados_pb.png);
+		
+	}
+	.box_category_desk:hover .content_prefabricados{
+		background-image:url(./images/img_prefabricados_pb.png);	
+	}	
+.content_pavimentacao{
+	width:233px;
+	height:236px;
+	background-image:url(/images/img_pavimentacao_blue.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+	.content_pavimentacao:hover{
+		background-image:url(/images/img_pavimentacao_pb.png);
+		
+	}
+	.box_category_desk:hover .content_pavimentacao{
+		background-image:url(/images/img_pavimentacao_pb.png);
+		
+	}	
+.field_item_category{
+	float:left;
+	margin-top:78px;
+	margin-bottom:54px;
+}
+.item_category{
+	width:571px;
+	height:74px;
+	background-image:url(/images/bg_item_category.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	text-align:left;
+	padding-left:110px;
+	padding-top:25px;
+}
+.item_category:hover{
+	background-image:url(/images/bg_item_category_selected.png);
+}
+.item_category:hover a.text_category {
+	color:#00d5d2;
+} 
+.selected_item_category{
+	background-image:url(/images/bg_item_category_selected.png);
+}
+.selected_item_category a.text_category {
+	color:#00d5d2;
+} 
+a.text_category {
+	font-family: 'Oxygen', sans-serif;
+	font-size:18px;
+	color:#e6fefd;
+	font-weight:bold;
+	margin-top:20px;	
+}
+a:hover.text_category {
+	color:#00d5d2;
+}
+
+
+.item_info_right{
+	min-height:354px;
+	padding-top:118px;
+}
+	.item_image{
+		min-height:100px;
+		height:auto;
+		float:left;
+	}
+	.item_text{
+		min-height:100px;
+		height:auto;		
+		float:left;	
+		max-width:290px;
+		width:auto;	
+		margin-left:53px;
+	}
+	.item_text p{
+		font-family: 'Oxygen', sans-serif;
+		font-size:14px;
+		color:#003d4e;
+		font-weight:normal;
+		text-align:left;		
+	}	
+table{
+	font-family: 'Oxygen', sans-serif;
+	font-weight:normal;
+	background:none;
+	border:none  !important;
+	border-collapse:collapse !important;
+
+}
+thead {
+	font-size:15px;
+	color:#003d4e;
+	background-color:#e6fefd !important;
+	max-width:1068px;
+	border:transparent 3px solid !important;
+	border-collapse:separate !important;
+	 
+}
+thead th{
+	padding-left:23px !important;
+	border:none  !important;
+}
+tbody{
+	font-size:15px;
+	color:#00c4c1;
+	font-family: 'Oxygen', sans-serif;
+	font-weight:normal;	
+	background-image:url(../img/bg_table_body.png);
+	text-align:left;
+	border-collapse:separate !important;
+	padding-bottom: 1em !important;
+    border:5px solid none !important;
+	
+	
+}
+
+tbody td{
+	padding-left:23px !important;
+	height:53px;
+	border:none;
+	padding:0px;
+ 
+}
+table tr:nth-of-type(even) {
+	background:none;
+}
+
+.bread_crumb_field{
+	height:101px;
+	border-bottom:#003d4e 1px solid;
+	background:#00293e;
+	padding-top:40px;
+	
+}
+.bread_crumb_field ul{
+	width:100%;
+	margin:0 auto;
+	padding-left:39px;
+}
+.bc_arrow_left{
+	position:relative;
+	float:left;
+	padding-right:18px;
+}
+.bread_crumb_field ul li{
+	float:left;
+	margin-right:0px;
+	font-family: 'Oxygen', sans-serif;
+	font-weight:normal;		
+}
+	.bc_text_1{
+		color:#005761;
+		font-size:14px;
+	}
+	.bc_text_2{
+		color:#00918f;
+		font-size:14px;
+	}
+
+
+ .produto_title
+ {
+	 margin-bottom:31px;
+	 font-size:18px;
+	 color:#4dc2c5;
+	 font-weight:normal;
+	 margin-top:30px;
+	 margin-left:39px;
+ }
+ .produto_text
+ {
+	 font-size:14px;
+	 color:#00918f;
+	 font-weight:bold;
+	 margin-top:30px;
+	 margin-left:39px;	
+	 margin-bottom:52px; 
+ }
+ 
+ .produto_img{
+	 text-align:center;
+ }
+ 
+ @media only screen and (max-width: 945px)
+{
+.item_image {
+	min-height: 100px;
+	height: auto;
+	float: none;
+	margin:0 auto;
+}
+.field_item_category {
+	padding-top:30px;
+	margin-left:100px;
+	float: none;
+	margin:0 auto;	
+}
+.item_text {
+	float:none;
+	margin:0 auto;
+}
+.item_info_right {
+	padding-top: 69px;
+	tex-align:center;
+}	
+}

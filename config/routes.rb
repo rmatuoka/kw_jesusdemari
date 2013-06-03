@@ -1,6 +1,5 @@
 KwJesusdemari::Application.routes.draw do
 
-
   get "treatment/index"
 
   get "group/index"
@@ -14,6 +13,7 @@ KwJesusdemari::Application.routes.draw do
   resources :contacts
   resources :products
   resources :sustainability
+  resources :budgets
   
   #Inicio do namespace Admin
   namespace(:admin){

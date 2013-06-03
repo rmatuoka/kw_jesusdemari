@@ -3,7 +3,7 @@
 	width:950px;
 	height:250px;
 	margin-top:-10px;
-	background-image:url('../images/top-products-index.jpg');
+	background-image:url('/images/top-products-index.jpg');
 	background-position:top right;
 	background-repeat:no-repeat;
 	text-align:center;
@@ -17,7 +17,7 @@
 		font-weight:bold;
 		margin-top:200px;
 		margin-left:2px;
-		background-image:url('../images/bg_article.png');
+		background-image:url('/images/bg_article.png');
 		width:184px;
 		height:30px;
 		padding-top:10px;
@@ -27,7 +27,7 @@
 	width:910px;
 	padding:20px 20px;
 	margin-top:30px;
-	background-image:url('../images/bg_article.png');
+	background-image:url('/images/bg_article.png');
 	}
 
 	#products-index-article h1{
@@ -69,7 +69,7 @@
 	position:relative;
 	width:98px;
 	height:575px;
-	background-image:url('../images/btn_slide_group.png');
+	background-image:url('/images/btn_slide_group.png');
 	background-position:top right;
 	background-repeat:no-repeat;
 	z-index:2000;
@@ -82,7 +82,7 @@
 	position:relative;
 	width:98px;
 	height:575px;
-	background-image:url('../images/btn_slide_group.png');
+	background-image:url('/images/btn_slide_group.png');
 	background-position:top left;
 	background-repeat:no-repeat;
 	z-index:2000;
@@ -282,7 +282,7 @@
 	display:block;
 	width:300px;
 	height:50px;
-	background-image:url('../images/btn-leia-mais-prod-2.jpg');
+	background-image:url('/images/btn-leia-mais-prod-2.jpg');
 	background-position:center bottom;
 	bottom:5px;
 	}
@@ -291,7 +291,7 @@
 	display:block;
 	width:300px;
 	height:50px;
-	background-image:url('../images/btn-leia-mais-prod-2.jpg');
+	background-image:url('/images/btn-leia-mais-prod-2.jpg');
 	background-position:center top;	
 	}
 
@@ -300,7 +300,7 @@
 	display:block;
 	width:300px;
 	height:50px;
-	background-image:url('../images/btn-leia-mais-prod-3.jpg');
+	background-image:url('/images/btn-leia-mais-prod-3.jpg');
 	background-position:center bottom;
 	bottom:5px;
 	}
@@ -309,7 +309,7 @@
 	display:block;
 	width:300px;
 	height:50px;
-	background-image:url('../images/btn-leia-mais-prod-3.jpg');
+	background-image:url('/images/btn-leia-mais-prod-3.jpg');
 	background-position:center top;	
 	}
 
@@ -318,7 +318,7 @@
 	width:950px;
 	height:209px;
 	margin-bottom:40px;
-	background-image:url('../images/bg_prod-2.png');
+	background-image:url('/images/bg_prod-2.png');
 	}
 
 
@@ -335,7 +335,7 @@
 	width:950px;
 	height:209px;
 	margin-bottom:40px;
-	background-image:url('../images/bg_prod-3.png');
+	background-image:url('/images/bg_prod-3.png');
 	}
 
 
@@ -352,7 +352,7 @@
 	width:950px;
 	height:209px;
 	margin-bottom:40px;
-	background-image:url('../images/bg_prod-1.png');
+	background-image:url('/images/bg_prod-1.png');
 	}
 
 

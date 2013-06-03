@@ -15,7 +15,7 @@
 
 
 body{
-	background-image:url('../images/bg_site.jpg');
+	background-image:url('/images/bg_site.jpg');
 	background-position:0px 40px;
 	background-repeat:no-repeat;
 	}

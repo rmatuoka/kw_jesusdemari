@@ -3,7 +3,7 @@
 	width:950px;
 	height:250px;
 	margin-top:-10px;
-	background-image:url('../images/top-sustainability.jpg');
+	background-image:url('/images/top-sustainability.jpg');
 	background-position:top right;
 	background-repeat:no-repeat;
 	}
@@ -22,7 +22,7 @@
 	width:910px;
 	padding:40px 20px;
 	margin-top:10px;
-	background-image:url('../images/bg_article.png');
+	background-image:url('/images/bg_article.png');
 	}
 	
 	#sustainability-article h1{
@@ -61,7 +61,7 @@
 	position:relative;
 	width:98px;
 	height:575px;
-	background-image:url('../images/btn_slide_group.png');
+	background-image:url('/images/btn_slide_group.png');
 	background-position:top right;
 	background-repeat:no-repeat;
 	z-index:2000;
@@ -74,7 +74,7 @@
 	position:relative;
 	width:98px;
 	height:575px;
-	background-image:url('../images/btn_slide_group.png');
+	background-image:url('/images/btn_slide_group.png');
 	background-position:top left;
 	background-repeat:no-repeat;
 	z-index:2000;

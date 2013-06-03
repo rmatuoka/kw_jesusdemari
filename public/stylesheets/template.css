@@ -4,7 +4,7 @@ body
 {
 	font-family: 'Oxygen', sans-serif !important;
 	background:#000;
-	background-image:url(../img/background_mob.jpg);
+	background-image:url(/images/background_mob.jpg);
 	background-repeat:no-repeat;
 	background-position:top center;
 }

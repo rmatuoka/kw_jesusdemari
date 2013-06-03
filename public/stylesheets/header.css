@@ -31,7 +31,7 @@
 					#grupo{
 						width:158px;
 						height:49px;
-						background-image:url('../images/btn_grupo.jpg');
+						background-image:url('/images/btn_grupo.jpg');
 						background-position:top center;
 						background-repeat:no-repeat;
 						cursor:pointer;
@@ -46,7 +46,7 @@
 						display:none;
 						width:147px;
 						height:49px;
-						background-image:url('../images/btn_servicos.jpg');
+						background-image:url('/images/btn_servicos.jpg');
 						background-position:top center;
 						background-repeat:no-repeat;
 						cursor:pointer;
@@ -59,7 +59,7 @@
 					#produtos{
 						width:146px;
 						height:49px;
-						background-image:url('../images/btn_produtos.jpg');
+						background-image:url('/images/btn_produtos.jpg');
 						background-position:top center;
 						background-repeat:no-repeat;
 						cursor:pointer;
@@ -72,7 +72,7 @@
 					#novidades{
 						width:158px;
 						height:49px;
-						background-image:url('../images/btn_novidades.jpg');
+						background-image:url('/images/btn_novidades.jpg');
 						background-position:top center;
 						background-repeat:no-repeat;
 						cursor:pointer;
@@ -85,7 +85,7 @@
 					#sustentabilidade{
 						width:187px;
 						height:49px;
-						background-image:url('../images/btn_sustentabilidade.jpg');
+						background-image:url('/images/btn_sustentabilidade.jpg');
 						background-position:top center;
 						background-repeat:no-repeat;
 						cursor:pointer;
@@ -98,7 +98,7 @@
 					#contato{
 						width:153px;
 						height:49px;
-						background-image:url('../images/btn_contato.jpg');
+						background-image:url('/images/btn_contato.jpg');
 						background-position:top center;
 						background-repeat:no-repeat;
 						cursor:pointer;
