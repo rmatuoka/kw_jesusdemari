@@ -28,11 +28,11 @@ body{
 	background:#e6fefd;
 }
 .content_artefatos{
-	width:233px;
 	height:236px;
 	background-image:url(/images/img_artefatos_blue.png);
 	background-repeat:no-repeat;
 	background-position:center;
+	display:block;
 }
 	.content_artefatos:hover{
 		background-image:url(/images/img_artefatos_bp.png);
@@ -43,11 +43,11 @@ body{
 		
 	}
 .content_prefabricados{
-	width:233px;
 	height:236px;
 	background-image:url(/images/img_prefabricados_blue.png);
 	background-repeat:no-repeat;
 	background-position:center;
+	display:block;
 }
 	.content_prefabricados:hover{
 		background-image:url(/images/img_prefabricados_pb.png);
@@ -57,11 +57,11 @@ body{
 		background-image:url(/images/img_prefabricados_pb.png);	
 	}	
 .content_pavimentacao{
-	width:233px;
 	height:236px;
 	background-image:url(/images/img_pavimentacao_blue.png);
 	background-repeat:no-repeat;
 	background-position:center;
+	display:block;
 }
 	.content_pavimentacao:hover{
 		background-image:url(/images/img_pavimentacao_pb.png);
