@@ -12,7 +12,7 @@ KwJesusdemari::Application.routes.draw do
   resources :contacts
   resources :products do
     member do
-      get "show_category"
+      get "show_subcategory"
       get "show_product"
     end
   end

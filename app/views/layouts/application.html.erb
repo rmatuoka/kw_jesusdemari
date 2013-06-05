@@ -8,10 +8,10 @@
   <title>Jesus de Mari</title>
 
   <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <%= stylesheet_link_tag "foundation"%>
   <%= stylesheet_link_tag "template"%>
   <%= stylesheet_link_tag "menu_mobile"%>
+  <%=javascript_include_tag :defaults %>
   <%= javascript_include_tag "custom.modernizr.js"%>
   
 <%=yield :head%>
@@ -86,15 +86,6 @@
 		  }).next().hide();		
 </script>
 <script type="text/javascript">
-
- 
-$('.item_category').click(function(event) {
-	$(".field_item_category").children(".item_category").removeClass('selected_item_category');
-	$(this).addClass('selected_item_category');
-   
-});
-
- 
 </script>
 </body>
 </html>
