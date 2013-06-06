@@ -1,9 +1,1 @@
-$('#show_subcategory').html("<%=escape_javascript(render('show'))%>");
-
-$('.item_category').click(function(event) {
-	$(".field_item_category").children(".item_category").removeClass('selected_item_category');
-	$(this).addClass('selected_item_category');
-   
-});
-
-$('#sub_<%= @category_id.blank? ? @subcategories.first.id : @category_id.id%>').trigger('click');
+$('#subcategory').html("<%=escape_javascript(render('subcategory'))%>");

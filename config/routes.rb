@@ -14,6 +14,8 @@ KwJesusdemari::Application.routes.draw do
     member do
       get "show_subcategory"
       get "show_product"
+      get "show_productspec"
+      get "show_subcategoryspec"
     end
   end
   resources :sustainability

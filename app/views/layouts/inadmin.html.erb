@@ -19,8 +19,8 @@
 <%= javascript_include_tag "menuadmin.js" %>
 <%= javascript_include_tag "jquery.tablesorter.min.js" %>
 <%= javascript_include_tag "jquery.foundation.alerts.js" %>
-
-
+<%= include_tiny_mce_if_needed %>
+<%=yield :head%>
 <script>
 jQuery(document).ready(function() 
     { 

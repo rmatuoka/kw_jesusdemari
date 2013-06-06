@@ -7,17 +7,19 @@
             <ul>
                 <img src="/images/img_arrow_left.png" class="bc_arrow_left">
                 <li class="bc_text_1">
-                    ...Anéis de Concreto &gt; 
+                    ...AnÃ©is de Concreto &gt; 
                 </li>
                 <li class="bc_text_2">
-                    Anéis de Concreto Lisos
+                    AnÃ©is de Concreto Lisos
                 </li>
             </ul>
         </div>
-        <div class="produto_title">Anéis de Concreto Lisos</div>
+        <div class="produto_title">AnÃ©is de Concreto Lisos</div>
         <div class="produto_text">
 	  <p>
-	    O Anel de Concreto Liso do  Grupo Jesus de Mari  seguem as normas da NBR contidas na ABNT, estes artefatos de concreto são utilizados na confecção de fossos sépticas e poços artesianos e são a garantia de uma obra segura.
+	    O Anel de Concreto Liso do  Grupo Jesus de Mari  seguem as normas da
+NBR contidas na ABNT, estes artefatos de concreto sÃ£o utilizados na confecÃ§Ã£o
+de fossos sÃ©pticas e poÃ§os artesianos e sÃ£o a garantia de uma obra segura.
 	  </p>
         </div>
         <div class="produto_img">
@@ -37,7 +39,11 @@
     </div>
 	<div class="large-8 columns title_field">
     	<p class="text_title">
-	  Nossa empresa disponibiliza a seus clientes uma ampla cartela de produtos relacionados a artefatos de concreto, incluindo Tubos de Concreto, Anéis de Concreto e Aduelas de Concreto todos produzidos pensando na mais alta qualidade de seus produtos e numa consciência ambiental no processo de confecção.
+	  Nossa empresa disponibiliza a seus clientes uma ampla cartela de
+produtos relacionados a artefatos de concreto, incluindo Tubos de Concreto,
+AnÃ©is de Concreto e Aduelas de Concreto todos produzidos pensando na mais alta
+qualidade de seus produtos e numa consciÃªncia ambiental no processo de
+confecÃ§Ã£o.
         </p>
     </div>    
 </div>
@@ -45,14 +51,28 @@
   <div class="large-12 columns content_desk">
     <% @categories.each do |category| %>
       <div class="large-4 columns box_category_desk">
-	<%= link_to '', show_subcategory_product_path(category.id), :remote => true, :id => "cat_"+category.id.to_s, :class => category.css%>
+	<%= link_to '', show_subcategory_product_path(category.id), :remote =>
+true, :id => "cat_"+category.id.to_s, :class => category.css%>
       </div>
       <%end%>
   </div>
 </div>
-<div id="show_subcategory" class="row"></div>
+<!-- Exibe as Subcategorias -->
+<div class="row" style="height:48px; padding-top:18px;">
+  <div id="subcategory" class="large-12 columns" style="display:block;">
+  </div>
+</div>
+<!-- Fim do menu de Subcategorias :( -->
 <div class="row">
-	<div class="large-12 columns content_desk">
+	<div id="products" class="large-6 small-12 columns content_desk">
+      
+    </div>
+    <div id="product_desc" class="large-6 small-12 columns content_desk">
+      
+    </div>
+</div>
+<div class="row">
+	<div id="subcategory_spec" class="large-12 columns content_desk">
         <table align="center">
           <thead>
             <tr height="53">
@@ -101,5 +121,13 @@
     </div>    
 </div>
 <script type="text/javascript">
- $('#cat_<%= @category_id.blank? ? @categories.first.id : @category_id.id%>').trigger('click');
+
+ 
+$('.item_category').click(function(event) {
+	$(".field_item_category").children(".item_category").removeClass('selected_item_category');
+	$(this).addClass('selected_item_category');
+   
+});
+
+ 
 </script>

@@ -1,11 +1,7 @@
-﻿<% @products.each do |product| %>
-<div class="item_info_right">
-	<div class="item_image">
-	  <%=image_tag(product.logo.url)%>
-	</div>
-	<div class="item_text">
-	  <p><%= product.summary%></p>
-	</div>
-	
+<div class="field_item_category">
+      	<% @products.each do |product| %>
+    <div class="item_category">
+      <%=link_to product.summary, show_productspec_product_path(product.id), :remote => true, :class => "text_category", :id => "prod_"+product.id.to_s%>
+    </div>
+    <% end %>
       </div>
-      <% end %>

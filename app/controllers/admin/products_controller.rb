@@ -1,6 +1,11 @@
 class Admin::ProductsController < ApplicationController
 layout "inadmin"
-
+uses_tiny_mce :options => {
+                            :theme => 'advanced',
+                            :theme_advanced_resizing => true,
+                            :theme_advanced_resize_horizontal => false,
+                            :plugins => %w{ table fullscreen }
+                          }
 before_filter :load_subcategorie
   def index
     @products = @subcategory.products.all

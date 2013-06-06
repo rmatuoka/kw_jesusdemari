@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = Category.all # Utilizado para trazer o Menu de Categorias
     
   end
   
-  def show_subcategory
+  def show_subcategory # Carrega as variaveis com o ID da Categoria e Subcategoria
     @category = Category.find_by_id(params[:id])
     @subcategories = @category.subcategories
   end
@@ -12,6 +12,11 @@ class ProductsController < ApplicationController
   def show_product
     @subcategories = Subcategory.find_by_id(params[:id])
     @products = @subcategories.products
+  end
+  
+  def show_productspec
+    @products = Product.find_by_id(params[:id])
+    @product = @products
   end
 
   def show
