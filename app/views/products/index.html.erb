@@ -7,19 +7,19 @@
             <ul>
                 <img src="/images/img_arrow_left.png" class="bc_arrow_left">
                 <li class="bc_text_1">
-                    ...AnÃ©is de Concreto &gt; 
+                    ...AnĂƒÂƒĂ‚Â©is de Concreto &gt; 
                 </li>
                 <li class="bc_text_2">
-                    AnÃ©is de Concreto Lisos
+                    AnĂƒÂƒĂ‚Â©is de Concreto Lisos
                 </li>
             </ul>
         </div>
-        <div class="produto_title">AnÃ©is de Concreto Lisos</div>
+        <div class="produto_title">AnĂƒÂƒĂ‚Â©is de Concreto Lisos</div>
         <div class="produto_text">
 	  <p>
 	    O Anel de Concreto Liso do  Grupo Jesus de Mari  seguem as normas da
-NBR contidas na ABNT, estes artefatos de concreto sÃ£o utilizados na confecÃ§Ã£o
-de fossos sÃ©pticas e poÃ§os artesianos e sÃ£o a garantia de uma obra segura.
+NBR contidas na ABNT, estes artefatos de concreto sĂƒÂƒĂ‚Â£o utilizados na confecĂƒÂƒĂ‚Â§ĂƒÂƒĂ‚Â£o
+de fossos sĂƒÂƒĂ‚Â©pticas e poĂƒÂƒĂ‚Â§os artesianos e sĂƒÂƒĂ‚Â£o a garantia de uma obra segura.
 	  </p>
         </div>
         <div class="produto_img">
@@ -39,11 +39,7 @@ de fossos sÃ©pticas e poÃ§os artesianos e sÃ£o a garantia de uma obra segu
     </div>
 	<div class="large-8 columns title_field">
     	<p class="text_title">
-	  Nossa empresa disponibiliza a seus clientes uma ampla cartela de
-produtos relacionados a artefatos de concreto, incluindo Tubos de Concreto,
-AnÃ©is de Concreto e Aduelas de Concreto todos produzidos pensando na mais alta
-qualidade de seus produtos e numa consciÃªncia ambiental no processo de
-confecÃ§Ã£o.
+	  Nossa empresa disponibiliza a seus clientes uma ampla cartela de produtos relacionados a artefatos de concreto, incluindo Tubos de Concreto, Anéis de Concreto e Aduelas de Concreto todos produzidos pensando na mais alta qualidade de seus produtos e numa consciência ambiental no processo de confecção.
         </p>
     </div>    
 </div>
@@ -58,7 +54,7 @@ true, :id => "cat_"+category.id.to_s, :class => category.css%>
   </div>
 </div>
 <!-- Exibe as Subcategorias -->
-<div class="row" style="height:48px; padding-top:18px;">
+<div class="row" style="height:auto; padding:18px 0px; background-color:#00D5D2">
   <div id="subcategory" class="large-12 columns" style="display:block;">
   </div>
 </div>
@@ -73,40 +69,7 @@ true, :id => "cat_"+category.id.to_s, :class => category.css%>
 </div>
 <div class="row">
 	<div id="subcategory_spec" class="large-12 columns content_desk">
-        <table align="center">
-          <thead>
-            <tr height="53">
-              <th width="234">Características</th>
-              <th width="234">Diâm Ext (mm)</th>
-              <th width="234">Alt (mm)</th>
-              <th width="234">Esp (mm)</th>
-              <th width="234">Peso (kg)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr height="53">
-              <td>Características</td>
-              <td>Diâm Ext (mm)</td>
-              <td>Alt (mm)</td>
-              <td>Esp (mm)</td>
-              <td>Peso (kg)</td>
-            </tr>
-            <tr>
-              <td>Características</td>
-              <td>Diâm Ext (mm)</td>
-              <td>Alt (mm)</td>
-              <td>Esp (mm)</td>
-              <td>Peso (kg)</td>
-            </tr>
-            <tr>
-              <td>Características</td>
-              <td>Diâm Ext (mm)</td>
-              <td>Alt (mm)</td>
-              <td>Esp (mm)</td>
-              <td>Peso (kg)</td>
-            </tr>
-          </tbody>
-        </table>  
+          
     </div>
 </div>
 <div class="row">
@@ -121,13 +84,9 @@ true, :id => "cat_"+category.id.to_s, :class => category.css%>
     </div>    
 </div>
 <script type="text/javascript">
-
- 
-$('.item_category').click(function(event) {
-	$(".field_item_category").children(".item_category").removeClass('selected_item_category');
-	$(this).addClass('selected_item_category');
+$('#cat_<%= @category_id.blank? ? @categories.first.id : @category_id.id%>').trigger('click');
    
-});
+
 
  
 </script>

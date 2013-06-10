@@ -1,1 +1,2 @@
 $('#subcategory').html("<%=escape_javascript(render('subcategory'))%>");
+$('#sub_<%= @subcategory_id.blank? ? @subcategories.first.id : @subcategory_id.id%>').trigger('click');

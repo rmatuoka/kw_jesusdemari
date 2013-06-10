@@ -1,5 +1,11 @@
 class Admin::SubcategoriesController < ApplicationController
 layout "inadmin"
+uses_tiny_mce :options => {
+                            :theme => 'advanced',
+                            :theme_advanced_resizing => true,
+                            :theme_advanced_resize_horizontal => false,
+                            :plugins => %w{ table fullscreen }
+                          }
 
 before_filter :load_category
   def index

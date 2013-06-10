@@ -10,7 +10,7 @@
   </p>
   <p>
     <%= f.label :description, "Descrição" %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => "mceEditor" %>
   </p>
   <p><%= f.submit "Salvar", :class => "button" %></p>
 <% end %>
