@@ -1,10 +1,10 @@
 $('#products').html("<%=escape_javascript(render('product'))%>");
+$('.item_category').css('cursor', 'pointer');
 $('.item_category').click(function(event) {
 	$(".field_item_category").children(".item_category").removeClass('selected_item_category');
 	$(this).addClass('selected_item_category');
    
 });
+$('#prod_<%= @product_id.blank? ? @products.first.id : @subcategory_id.id%>').trigger('click');
 
 $('#subcategory_spec').html("<%=escape_javascript(render('subcategoryspec'))%>");
-
-$('#prod_6').trigger('click');

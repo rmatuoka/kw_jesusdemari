@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @category_id = Category.find_by_id(params[:id])
     @subcategory_id = Subcategory.find_by_id(params[:id])
+    @product_id = Product.find_by_id(params[:id])
     if !@category_id.blank?
       render :index
     else

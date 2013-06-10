@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.string   "css"
   end
 
   create_table "contacts", :force => true do |t|
@@ -82,7 +81,7 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.datetime "updated_at"
     t.boolean  "active"
     t.boolean  "published"
-    t.integer  "subcategory_id"
+    t.integer  "subcategorie_id"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -116,7 +115,6 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "description"
   end
 
   create_table "user_sessions", :force => true do |t|
