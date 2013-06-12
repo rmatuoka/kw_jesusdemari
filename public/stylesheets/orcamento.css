@@ -20,6 +20,7 @@ body{
 	padding-top:31px;
 }
 .text_orçamento_desk{
+	text-align:justify;
 	font-family: 'Oxygen', sans-serif;
 	font-size:14px;
 	color:#003d4e;
@@ -98,7 +99,10 @@ body{
 	border-color: rgb(44, 199, 195) transparent transparent transparent;	
 
 }
-
+.f-dropdown {
+	background:#dafdfd;
+	max-width:510px;
+}
 .orcamento_box input, select, textarea{
 	background-color:#003d4e;
 	border-color:#003d4e;
@@ -140,10 +144,12 @@ body{
 		 }
 .bt_enviar_align_mob{
 	float:left;
-	width:357px;
+	width:357px !important;
 }
 .bt_enviar_align_desk{
 	float:right;
+	width:294px !important;
+	height:50px !important;
 }
 		 
 ::-webkit-input-placeholder  { color:#00918f; }
