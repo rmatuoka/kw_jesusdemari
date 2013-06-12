@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-
 <head>
-	<meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Jesus de Mari</title>
-
-  <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Jesus de Mari</title>
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "foundation"%>
   <%= stylesheet_link_tag "template"%>
-  <%= stylesheet_link_tag "menu_mobile"%>
-  <%=javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "m_mobile"%>
+  <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag "custom.modernizr.js"%>
-  
 <%=yield :head%>
 </head>
 <body>
-<%=render :file => "layouts/_public_menu.html.erb"%>
-<%=yield%>
-<%=render :file => "layouts/_public_footer.html.erb"%>
+<%=render :file => 'layouts/_public_menu.html.erb'%>
+<%= yield %>
+<%=render :file => 'layouts/_public_footer.html.erb'%>
 <script>
   document.write('<script src=' +
   ('__proto__' in {} ? '/javascripts/zepto' : '/javascripts/jquery') +

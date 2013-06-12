@@ -34,7 +34,8 @@
 </div>
 <div class="row">
 	<div class="large-12 columns content_desk">
-        <div class="large-6 columns box_content_desk">
+	<div class="large-6 columns box_content_desk">
+	<%= link_to('mailto:financeiro@jesusdemari.com.br') do%>
         	<div class="box_atendimento_cont">
               <%=image_tag ("img_atend_letter.jpg"), :class => "img_atend_align"%>
                 <p class="atend_text">2ª Via do Boleto</p><br />
@@ -43,16 +44,18 @@
 					financeiro@jesusdemari.com.br
                 </p >
             </div>
+            <%end%>
         </div>
         <div class="large-6 columns box_content_desk">
+        <%= link_to(root_path) do%>
         	<div class="box_atendimento_cont">
               <%=image_tag ("img_atend_symbol.jpg"), :class => "img_atend_align"%>
                 <p class="atend_text">Atendimento Online</p><br />
-                <p  class="atend_text_2">
-					<a href="#">Clique aqui</a> e inicie um chat com nossa<br /> 
-					atendente!
+                <p  class="atend_text_2">Clique aqui e inicie um chat com nossa<br /> 
+		atendente!
                 </p >
             </div>
+            <%end%>
         </div>
     </div>
 </div>
