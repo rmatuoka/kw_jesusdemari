@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.all # Utilizado para trazer o Menu de Categorias
-    
   end
   
   def show_subcategory # Carrega as variaveis com o ID da Categoria e Subcategoria

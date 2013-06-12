@@ -1,25 +1,23 @@
-﻿<%content_for :head do%>
-  <%= stylesheet_link_tag "produtos"%>
+<% content_for :head do%>
+<%= stylesheet_link_tag 'produtos'%>
 <% end %>
 <div class="row">
-	<div class="small-12 columns content_mobile">
+<div class="small-12 columns content_mobile">
         <div class="bread_crumb_field">
             <ul>
                 <img src="/images/img_arrow_left.png" class="bc_arrow_left">
                 <li class="bc_text_1">
-                    ...AnĂƒÂƒĂ‚Â©is de Concreto &gt; 
+                    ...Anéis de Concreto &gt; 
                 </li>
                 <li class="bc_text_2">
-                    AnĂƒÂƒĂ‚Â©is de Concreto Lisos
+                    Anéis de Concreto Lisos
                 </li>
             </ul>
         </div>
-        <div class="produto_title">AnĂƒÂƒĂ‚Â©is de Concreto Lisos</div>
+        <div class="produto_title">Anel de Concreto Lisos</div>
         <div class="produto_text">
 	  <p>
-	    O Anel de Concreto Liso do  Grupo Jesus de Mari  seguem as normas da
-NBR contidas na ABNT, estes artefatos de concreto sĂƒÂƒĂ‚Â£o utilizados na confecĂƒÂƒĂ‚Â§ĂƒÂƒĂ‚Â£o
-de fossos sĂƒÂƒĂ‚Â©pticas e poĂƒÂƒĂ‚Â§os artesianos e sĂƒÂƒĂ‚Â£o a garantia de uma obra segura.
+	    O Anel de Concreto Liso do Grupo Jesus de Mari seguem as normas da NBR contidas na ABNT, estes artefatos de concreto são utilizados na confecção de fossos sépticas e poços artesianos e são a garantia de uma obra segura.
 	  </p>
         </div>
         <div class="produto_img">
@@ -85,8 +83,4 @@ true, :id => "cat_"+category.id.to_s, :class => category.css%>
 </div>
 <script type="text/javascript">
 $('#cat_<%= @category_id.blank? ? @categories.first.id : @category_id.id%>').trigger('click');
-   
-
-
- 
 </script>
