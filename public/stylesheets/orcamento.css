@@ -100,13 +100,10 @@ body{
 }
 
 .orcamento_box input, select, textarea{
-	background-color:#003d4e;
-	border-color:#003d4e;
 	font-family: 'Oxygen', sans-serif;
 	font-size:18px;
 	color:#00918f;
 	font-weight:bold;	
-	width:404px;	
 	height:59px;
 	-webkit-border-radius: 51px 0px 0px 51px !important;
 	-moz-border-radius: 51px 0px 0px 51px !important;
