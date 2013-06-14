@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603213445) do
+ActiveRecord::Schema.define(:version => 20130614173936) do
 
   create_table "banners", :force => true do |t|
     t.string   "title"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
+    t.string   "city"
   end
 
   create_table "categories", :force => true do |t|
@@ -45,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "css"
   end
 
   create_table "contacts", :force => true do |t|
@@ -81,7 +84,7 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.datetime "updated_at"
     t.boolean  "active"
     t.boolean  "published"
-    t.integer  "subcategorie_id"
+    t.integer  "subcategory_id"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -115,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20130603213445) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "user_sessions", :force => true do |t|

@@ -35,15 +35,8 @@
           <%=form_for ([@budget]) do |f|%>
 	    <%=f.text_field :name, :placeholder => "Nome"%>
 	    <%=f.text_field :mail, :placeholder => "Email"%>
-	    <a href="#" data-dropdown="drop1" class="button dropdown select_drop">Dropdown Button</a><br>
-                <ul id="drop1" class="f-dropdown">
-                  <li><a href="#">This is a link</a></li>
-                  <li><a href="#">This is another</a></li>
-                  <li><a href="#">Yet another</a></li>
-                  <li><a href="#">This is a link</a></li>
-                  <li><a href="#">This is another</a></li>
-                  <li><a href="#">Yet another</a></li>		  
-                </ul>
+	    <%= f.select (:state, options_for_select([['Selecione o Estado',''],['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]),:class => "select_drop", :style => "display:none; background-color:none !important") %>
+	    <%=f.text_field :city, :placeholder => "Cidade"%>
             <%=f.text_area :message, :placeholder => "Mensagem"%>
             <%=image_submit_tag("bt_enviar_orcamento_desk.png", :class => "bt_enviar_align_desk")%>
           <%end%>
