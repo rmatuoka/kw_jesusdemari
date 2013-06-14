@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   def show_product
     @subcategories = Subcategory.find_by_id(params[:id])
     @products = @subcategories.products
+    @product = Product.find_by_id(params[:id])
     @subcategory = @subcategories
   end
   
