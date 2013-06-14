@@ -5,6 +5,25 @@ $('.item_category').click(function(event) {
 	$(this).addClass('selected_item_category');
    
 });
+
+$('.box_category_desk').click(function(event) {
+	$("div").children(".box_category_desk").removeClass('selected_box_category_desk');
+	$(this).addClass('selected_box_category_desk');	   
+  	
+});
+
+
+
+
+
+
+
+
+$('.sub_item_a').click(function(event) {
+	$("#subcategory").children("a").removeClass('sub_item_a_selected');
+	$(this).addClass('sub_item_a_selected');
+   
+});
 $('#prod_<%= @product_id.blank? ? @products.first.id : @subcategory_id.id%>').trigger('click');
 
 $('#subcategory_spec').html("<%=escape_javascript(render('subcategoryspec'))%>");

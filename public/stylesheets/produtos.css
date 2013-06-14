@@ -28,12 +28,29 @@ body{
 	background-color:#00D5D2;
 	text-align: center;
 }
+.sub_item_a{
+height:52px;
+	color:#FFF;
+	padding:16px 16px;
+}
+.sub_item_a:hover{
+background:#fff;
+}
+.sub_item_a_selected{
+background:#fff;
+color: #2795b6;
+}
+
+
+
 .box_category_desk{
 	background:#c0fffc;
 }
 .box_category_desk:hover{
 	background:#e6fefd;
 }
+.selected_box_category_desk{background: #e6fefd;}
+
 .content_artefatos{
 	height:236px;
 	background-image:url(/images/img_artefatos_blue.png);
@@ -51,6 +68,10 @@ body{
 		background-image:url(/images/img_artefatos_bp.png);
 		
 	}
+	
+.selected_content_artefatos{
+	background-image:url(/images/img_artefatos_bp.png);
+}	
 .content_prefabricados{
 	height:236px;
 	background-image:url(/images/img_prefabricados_blue.png);
@@ -67,6 +88,11 @@ body{
 	.box_category_desk:hover .content_prefabricados{
 		background-image:url(/images/img_prefabricados_pb.png);	
 	}	
+	
+.selected_content_prefabricados{
+	background-image:url(/images/img_prefabricados_pb.png);
+}		
+
 .content_pavimentacao{
 	height:236px;
 	background-image:url(/images/img_pavimentacao_blue.png);
@@ -84,6 +110,13 @@ body{
 		background-image:url(/images/img_pavimentacao_pb.png);
 		
 	}	
+.selected_content_pavimentacao{
+	background-image:url(/images/img_pavimentacao_pb.png);
+}	
+	
+	
+	
+	
 .field_item_category{
 	float:left;
 	margin-top:78px;
