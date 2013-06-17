@@ -84,9 +84,9 @@ body{
 	padding-left:40px;
 }
 .orcamento_box_desk .select_drop{
-	-webkit-border-radius: 51px 0px 0px 51px;
-	-moz-border-radius: 51px 0px 0px 51px;
-	border-radius: 51px 0px 0px 51px;
+	-webkit-border-radius: 51px 51px 51px 51px !important;
+	-moz-border-radius: 51px 51px 51px 51px !important;
+	border-radius: 51px 51px 51px 51px !important;	
 	width:404px;
 	height:59px;
 	padding-top:22px;
@@ -109,9 +109,9 @@ body{
 	color:#00918f;
 	font-weight:bold;	
 	height:59px;
-	-webkit-border-radius: 51px 0px 0px 51px !important;
-	-moz-border-radius: 51px 0px 0px 51px !important;
-	border-radius: 51px 0px 0px 51px !important;	
+	-webkit-border-radius: 51px 51px 51px 51px !important;
+	-moz-border-radius: 51px 51px 51px 51px !important;
+	border-radius: 51px 51px 51px 51px !important;	
 	padding-left:40px;
 }
 .orcamento_box textarea:focus{
