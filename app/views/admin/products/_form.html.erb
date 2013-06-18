@@ -1,6 +1,10 @@
 ﻿<%= form_for ([:admin,@category,@subcategory,@product], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
+  <p>
+    <%= f.label :title, "Título" %><br />
+    <%= f.text_field :title, :placeholder => "Título", :class => "twelve columns"  %>
+  </p>
     <%= f.label :summary, "Descrição" %><br />
     <%= f.text_field :summary, :placeholder => "Resumo", :class => "twelve columns"  %>
   </p>
