@@ -1,6 +1,6 @@
 <div class="item_info_right">
 <div class="item_image">
-<%= @product.logo.file? ? image_tag(@product.logo.url) : image_tag("image-missing.png")%>
+<%= @product.logo.file? ? image_tag(@product.logo.url("logo")) : image_tag("image-missing.png")%>
 </div>
 <div class="item_text">
 <p><%= @product.summary%></p>
