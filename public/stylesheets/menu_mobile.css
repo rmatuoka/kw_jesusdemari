@@ -56,6 +56,19 @@ nav a:hover, nav a:active {
 nav a#pull {
 	display: none;
 }
+.align_arrow_menu{
+	float:right;
+	margin-top:22px;
+	margin-right:37px;
+	
+}
+nav ul li ul {
+	margin-left:15px;
+	border-top:#00bab5 2px solid;
+	border-bottom:#00bab5 2px solid;	
+}
+
+
 
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 900px) {
