@@ -1,6 +1,6 @@
 <div class="field_item_category">
       	<% @products.each do |product| %>
-    <div class="item_category">
+    <div class="item_category" id="button_<%=product.id.to_s%>">
       <%=link_to product.title, show_productspec_product_path(product.id), :remote => true, :class => "text_category", :id => "prod_"+product.id.to_s%>
     </div>
     <% end %>

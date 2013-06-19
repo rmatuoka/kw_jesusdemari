@@ -82,6 +82,10 @@ true, :id => "cat_"+category.id.to_s, :class => category.css%>
     </div>    
 </div>
 <script type="text/javascript">
+$('.box_category_desk').click(function(event) {
+	$("div").children(".box_category_desk").removeClass('selected_box_category_desk');
+	$(this).addClass('selected_box_category_desk');	   
+  	
+});
 $('#cat_<%= @category_id.blank? ? @categories.first.id : @category_id.id%>').trigger('click');
- 
 </script>
