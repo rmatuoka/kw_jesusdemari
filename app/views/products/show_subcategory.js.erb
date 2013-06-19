@@ -1,2 +1,7 @@
 $('#subcategory').html("<%=escape_javascript(render('subcategory'))%>");
+$('.sub_item_a').click(function(event) {
+	$("#subcategory").children("a").removeClass('sub_item_a_selected');
+	$(this).addClass('sub_item_a_selected');
+   
+});
 $('#sub_<%= @subcategory_id.blank? ? @subcategories.first.id : @subcategory_id.id%>').trigger('click');
