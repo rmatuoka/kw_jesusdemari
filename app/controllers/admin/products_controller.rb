@@ -1,12 +1,14 @@
 class Admin::ProductsController < ApplicationController
 layout "inadmin"
+before_filter :load_subcategorie
+
 uses_tiny_mce :options => {
                             :theme => 'advanced',
                             :theme_advanced_resizing => true,
                             :theme_advanced_resize_horizontal => false,
                             :plugins => %w{ table fullscreen }
                           }
-before_filter :load_subcategorie
+
   def index
     @products = @subcategory.products.all
   end
@@ -49,6 +51,6 @@ before_filter :load_subcategorie
   
   def load_subcategorie
   @category = Category.find(params[:category_id])
-	@subcategory = Subcategory.find(params[:subcategory_id])
+  @subcategory = Subcategory.find(params[:subcategory_id])
   end
 end

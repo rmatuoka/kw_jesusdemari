@@ -26,7 +26,9 @@ KwJesusdemari::Application.routes.draw do
   namespace(:admin){
     resources :categories do
       resources :subcategories do
-        resources :products
+        resources :products do
+	  resources :product_images 
+	end
       end
     end
     resources :notices

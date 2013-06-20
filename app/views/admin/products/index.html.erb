@@ -15,6 +15,7 @@
       <td><%= product.active %></td>
       <td><%= link_to "Visualizar", admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button" %></td>
       <td><%= link_to "Editar", edit_admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button" %></td>
+      <td><%= link_to "Imagens das especificações", admin_category_subcategory_product_product_images_path(@category,@subcategory,product), :class => "secondary small button" %></td>
       <td><%= link_to "Deletar", admin_category_subcategory_product_path(@category,@subcategory,product), :class => "secondary small button", :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>

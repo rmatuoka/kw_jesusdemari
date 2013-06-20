@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
   def show_productspec
     @products = Product.find_by_id(params[:id])
     @product = @products
+    @product_images = @product.product_images.all
   end
 
   def show
