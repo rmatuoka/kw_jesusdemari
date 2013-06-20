@@ -1,0 +1,5 @@
+  <% @product_images.each do |image| %>
+  <div class="small-4 columns content_desk img_prod_space">
+    <%= image_tag(image.image("medium"), :title => image.title)%>
+    </div> 
+  <% end %>

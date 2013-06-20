@@ -1,0 +1,23 @@
+<% title "Admin/Product Images" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Active</th>
+    <th>Published</th>
+  </tr>
+  <% for product_image in @product_images %>
+    <tr>
+      <td><%= product_image.title %></td>
+      <td><%= product_image.active %></td>
+      <td><%= product_image.published %></td>
+      <td><%= image_tag(product_image.image.url(:thumb))%></td>
+      <td><%= link_to "Show", admin_category_subcategory_product_product_image_path(@category,@subcategory,@product,product_image) %></td>
+      <td><%= link_to "Edit", edit_admin_category_subcategory_product_product_image_path(@category,@subcategory,@product,product_image) %></td>
+      <td><%= link_to "Destroy", admin_category_subcategory_product_product_image_path(@category,@subcategory,@product,product_image), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Admin/Product Image", new_admin_category_subcategory_product_product_image_path %></p>
+<p><%= link_to "Voltar", admin_category_subcategory_products_path(@category,@subcategory,@product)%></p>
