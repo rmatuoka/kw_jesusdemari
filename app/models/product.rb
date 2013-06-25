@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  #default_scope where(:active => true)
   #attr_accessible :summary, :body, :link, :active, :published
   belongs_to :subcategory
   has_many :product_images
